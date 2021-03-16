@@ -1,0 +1,39 @@
+.footer-link {
+	a {
+		color: $white;
+	}
+}
+
+.footer-spc-logo {
+	img {
+		width: 200px;
+
+		@media screen and (max-width: 500px) {
+			width: 170px;
+		}
+	}
+
+	margin-bottom: 20px;
+}
+
+.footer-box {
+	p {
+		@media screen and (max-width: 500px) {
+			text-align: center;
+		}
+	}
+}
+// .footer-bg{
+// 	background-image:url("./assets/img/bg-footer.png") ;
+// }
+.red-line{
+	background-color: #96172E;
+	height: 10px;
+	width: 100%;
+}
+footer {
+  width: 100%;
+  padding: 10px;
+  //color: #0099cc;
+  margin-top: 0px;
+}

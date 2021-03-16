@@ -1,0 +1,32 @@
+//plugin
+@import "../scss/plugin/boostrap";
+@import "../scss/plugin/slick";
+@import "../scss/plugin/slick-theme";
+@import "../scss/plugin/jsSlider";
+@import "../scss/plugin/aos";
+//XX Style
+@import "../scss/style/color";
+@import "../scss/style/fonts";
+//@import "../scss/style/banner";
+@import "../scss/style/btn";
+//@import "../scss/style/card";
+@import "../scss/style/img";
+//@import "../scss/style/nav";
+//@import "../scss/style/navList";
+@import "../scss/style/section";
+@import "../scss/style/footer";
+@import "../scss/style/swiperSpc";
+//@import "../scss/style/slick";
+//element
+//@import "../scss/elment/parallax";
+//@import "../scss/elment/search";
+@import "../scss/elment/breadcrumb";
+@import "../scss/elment/header";
+.breadcrumb {
+    background-color: $white;
+    //background-color: red;
+    padding: .75rem 0rem;
+    a {
+        color: $spc-blue;
+    }
+}

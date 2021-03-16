@@ -1,0 +1,199 @@
+//nav-3
+//https://codepen.io/taniarascia/pen/dYvvYv?editors=1100
+//Responsive Dropdown Navigation Bar
+// Navigation Variables
+$content-width: 1200px;
+$breakpoint: 799px;
+$nav-height: 80px;
+//$nav-background: #262626;
+$nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581DC;
+
+// Outer navigation wrapper
+.navigation-2 {
+  height: $nav-height;
+  background: $spc-blue;
+  z-index: 999999;
+  &::after{
+		content: " ";
+		background-color: $spc-red;
+		height: 10px;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		z-index: 2;
+	}
+}
+
+// Logo and branding
+.brand-2 {
+  position: absolute;
+  padding-left: 20px;
+  //padding-left: 70px;
+  float: left;
+  line-height: $nav-height;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  a,
+  a:visited {
+    color: $nav-font-color;
+    text-decoration: none;
+  }
+}
+
+// Container with no padding for navbar
+.nav-container-2 {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+// Navigation 
+nav {
+  float: right;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      position: relative;
+      a,
+      a:visited {
+        display: block;
+        padding: 0 4px;
+        //margin-left: 20px;
+        line-height: $nav-height;
+        //@at-root: $nav-background;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0)0%);
+        color: $nav-font-color;
+        &:hover {
+          //background: $link-hover-color;
+          background: $spc-blue-600;
+          color: $nav-font-color;
+          //chris add
+          list-style: none;
+          text-decoration: none;
+        }
+        &:not(:only-child):after {
+          padding-left: 4px;
+          //content: ' ▾';
+          content: ' ';
+        }
+      } // Dropdown list
+      ul li {
+        min-width: 180px;
+        a {
+          padding: 15px;
+          line-height: 20px;
+          background: $spc-blue;
+        }
+      }
+    }
+  }
+}
+
+// Dropdown list binds to JS toggle event
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+
+// Binds to JS Toggle
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  //left: 0;
+  //background: $nav-background;
+  background: $spc-blue;
+  height: $nav-height;
+  width: $nav-height;
+}
+@media only screen and (max-width: 798px) {
+  .navigation {
+    background: $spc-blue;
+  }
+  // Hamburger nav visible on mobile only
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+   width: 100%;
+    padding: $nav-height 0 15px;
+    ul {
+      display: none;
+      li {
+        float: none;
+        a {
+          padding: 15px;
+          line-height: 20px;
+          background: $spc-blue;
+        }
+        ul li a {
+          padding-left: 30px;
+          background: $spc-blue;
+        }
+      }
+    }
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: $breakpoint) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+  span,
+  span:before,
+  span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: $nav-font-color;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  span:before {
+    top: -10px;
+  }
+  span:after {
+    bottom: -10px;
+  }
+  &.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+      top: 0;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// Page content 
+article {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 10px;
+}

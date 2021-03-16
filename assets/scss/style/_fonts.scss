@@ -1,0 +1,363 @@
+//text
+.text-bold {
+    font-weight: 500 !important;
+}
+
+//Add fonts
+//Frank Ruhl Libre: Regular>400, Medium>500, Bold>700
+//font-family: 'Frank Ruhl Libre', serif;
+//Hind Guntur: Regular>400, Medium>500
+//font-family: 'Hind Guntur', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Hind+Guntur:wght@400;500&display=swap');
+//
+//typography
+$font: 14px 18px 20px 24px 26px 30px 40px 48px;
+@mixin font($index:1) {
+    font-size: nth($font, $index);
+    line-height: line-height($index);
+}
+
+@function line-height($index:1) {
+    $font-size: nth($font, $index);
+    @return (floor($font-size/ 10px)+1) *10px;
+}
+
+$leading: 20px 28px 32px 38px 42px 48px 64px 76px;
+@mixin leading($index:1) {
+    line-height: nth($leading, $index);
+}
+
+//example
+// .text-fontTitle+Size-weight-leading {
+//   color: $dark-grey-800;
+//   @include font(1);
+//   @include leading(1);
+//   font-family: "Raleway", sans-serif;
+// }
+//400>regilar
+.text-f-1-4-1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    @include font(1);
+    @include leading(1);
+    @media screen and (max-width: 500px) {
+        font-size: 14px;
+    }
+}
+
+.text-f-2-4-2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    @include font(2);
+    @include leading(2);
+}
+
+.text-f-3-4-3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    @include font(3);
+    @include leading(3);
+}
+
+.text-f-4-4-4 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    @include font(4);
+    @include leading(4);
+}
+
+.text-f-5-4-5 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    @include font(5);
+    @include leading(5);
+    // @media screen and (max-width: 500px) {
+    //     font-size: 24px;
+    // }
+}
+
+.text-f-6-4-6 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    @include font(6);
+    @include leading(6);
+}
+
+.text-f-7-4-7 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    @include font(7);
+    @include leading(7);
+}
+
+.text-f-8-4-8 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 400;
+    @include font(8);
+    @include leading(8);
+}
+
+//500>medium
+.text-f-1-5-1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    @include font(1);
+    @include leading(1);
+}
+
+.text-f-2-5-2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    @include font(2);
+    @include leading(2);
+}
+
+.text-f-3-5-3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    @include font(3);
+    @include leading(3);
+    @media screen and (max-width: 500px) {
+        font-size: 20px;
+    }
+}
+
+.text-f-4-5-4 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    @include font(4);
+    @include leading(4);
+    // @media screen and (max-width: 500px) {
+    //     @include font(3);
+    //     @include leading(3);
+    // }
+}
+
+.text-f-5-5-5 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    @include font(5);
+    @include leading(5);
+}
+
+.text-f-6-5-6 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    @include font(6);
+    @include leading(6);
+}
+
+.text-f-7-5-7 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    @include font(7);
+    @include leading(7);
+}
+
+.text-f-8-5-8 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    @include font(8);
+    @include leading(8);
+}
+
+//700>bold
+.text-f-1-7-1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    @include font(1);
+    @include leading(1);
+}
+
+.text-f-2-7-2 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    @include font(2);
+    @include leading(2);
+}
+
+.text-f-3-7-3 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    @include font(3);
+    @include leading(3);
+}
+
+.text-f-4-7-4 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    @include font(4);
+    @include leading(4);
+}
+
+.text-f-5-7-5 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    @include font(5);
+    @include leading(5);
+}
+
+.text-f-6-7-6 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    @include font(6);
+    @include leading(6);
+}
+
+.text-f-7-7-7 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    @include font(7);
+    @include leading(7);
+}
+
+.text-f-8-7-8 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 700;
+    @include font(8);
+    @include leading(8);
+    @media screen and (max-width: 500px) {
+        font-size: 26px;
+    }
+}
+
+//
+//h
+//400>regilar
+.text-h-1-4-1 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 400;
+    @include font(1);
+    @include leading(1);
+    @media screen and (max-width: 500px) {
+        font-size: 10px;
+    }
+}
+
+.text-h-2-4-2 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 400;
+    @include font(2);
+    @include leading(2);
+}
+
+.text-h-3-4-3 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 400;
+    @include font(3);
+    @include leading(3);
+}
+
+.text-h-4-4-4 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 400;
+    @include font(4);
+    @include leading(4);
+}
+
+.text-h-5-4-5 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 400;
+    @include font(5);
+    @include leading(5);
+    // @media screen and (max-width: 500px) {
+    //     font-size: 24px;
+    // }
+}
+
+.text-h-6-4-6 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 400;
+    @include font(6);
+    @include leading(6);
+}
+
+.text-h-7-4-7 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 400;
+    @include font(7);
+    @include leading(7);
+}
+
+.text-h-8-4-8 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 400;
+    @include font(8);
+    @include leading(8);
+}
+
+//500>medium
+.text-h-1-5-1 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 500;
+    @include font(1);
+    @include leading(1);
+}
+
+.text-h-2-5-2 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 500;
+    @include font(2);
+    @include leading(2);
+}
+
+.text-h-3-5-3 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 500;
+    @include font(3);
+    @include leading(3);
+}
+
+.text-h-4-5-4 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 500;
+    @include font(4);
+    @include leading(4);
+    // @media screen and (max-width: 500px) {
+    //     @include font(3);
+    //     @include leading(3);
+    // }
+}
+
+.text-h-5-5-5 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 500;
+    @include font(5);
+    @include leading(5);
+}
+
+.text-h-6-5-6 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 500;
+    @include font(6);
+    @include leading(6);
+}
+
+.text-h-7-5-7 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 500;
+    @include font(7);
+    @include leading(7);
+}
+
+.text-h-8-5-8 {
+    font-family: 'Hind Guntur', sans-serif;
+    font-weight: 500;
+    @include font(8);
+    @include leading(8);
+}
+
+//text shadow
+.text-shadow-black {
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+//big text
+.text-f-5-max {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: 140px;
+    @media screen and (max-width: 500px) {
+        font-size: 40px;
+    }
+    //z-index: 2;
+}
