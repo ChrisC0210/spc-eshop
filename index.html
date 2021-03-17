@@ -54,7 +54,8 @@
 	</div>
 	<!-- slider -->
 	<div class="container">
-		<div class="col-12 border" style="background-color: rgb(255, 255, 255); padding:20px;">
+		<div class="col-12" style="background-color: rgb(255, 255, 255); padding:20px;">
+			<!-- <div class="col-12 border" style="background-color: rgb(255, 255, 255); padding:20px;"> -->
 			<!-- Section -->
 			<!-- Swiper -->
 			<div class="swiper-container">
@@ -70,7 +71,7 @@
 												<h4 class="text-m-7-7-7 spc-blue">St. Paul’s College Souvenir</h4>
 												<div class="text-h-1-4-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
 												<div class="pr-4 mt-4 mb-2 text-h-1-4-1">
-													<button type="submit" class="btn btn-primary btn-block">Shop Now</button>
+													<button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">Shop Now</button>
 												</div>
 											</div>
 											<!-- card-body -->
@@ -101,10 +102,10 @@
 									<div class="col-xl-12">
 										<div class="col-12">
 											<div class="card-body" style="background-color: rgb(255, 255, 255);">
-												<h4 class="text-m-7-7-7 spc-blue">St. Paul’s College Souvenir 2</h4>
+												<h4 class="text-m-7-7-7 spc-blue">St. Paul’s College Souvenir</h4>
 												<div class="text-h-1-4-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
 												<div class="pr-4 mt-4 mb-2 text-h-1-4-1">
-													<button type="submit" class="btn btn-primary btn-block">Shop Now</button>
+													<button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">Shop Now</button>
 												</div>
 											</div>
 											<!-- card-body -->
@@ -119,7 +120,7 @@
 									<!-- Swiper -->
 
 									<div class=" " >
-										<img src="./assets/img/spc-be-1.png">
+										<img src="./assets/img/spc-slide-2.png">
 									</div>
 								</div>
 							</div>
@@ -371,8 +372,9 @@
 		});
 		//owl
 		$('.owl-carousel').owlCarousel({
+			nav:true,
+			dots: false,
 			margin:20,
-			loop:true,
 			items:4,
 			responsive:{
 				780:{
