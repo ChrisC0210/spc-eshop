@@ -4,11 +4,11 @@
 }
 
 //Add fonts
-//Frank Ruhl Libre: Regular>400, Medium>500, Bold>700
-//font-family: 'Frank Ruhl Libre', serif;
+//Merriweather: Regular>400, Bold>700, Black>900
+//font-family: 'Merriweather', serif;
 //Hind Guntur: Regular>400, Medium>500
 //font-family: 'Hind Guntur', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Hind+Guntur:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@400;500&family=Merriweather:wght@400;700;900&display=swap');
 //
 //typography
 $font: 14px 18px 20px 24px 26px 30px 40px 48px;
@@ -34,9 +34,9 @@ $leading: 20px 28px 32px 38px 42px 48px 64px 76px;
 //   @include leading(1);
 //   font-family: "Raleway", sans-serif;
 // }
-//400>regilar
-.text-f-1-4-1 {
-    font-family: 'Frank Ruhl Libre', serif;
+//400>regular
+.text-m-1-4-1 {
+    font-family: 'Merriweather', serif;
     font-weight: 400;
     @include font(1);
     @include leading(1);
@@ -45,29 +45,29 @@ $leading: 20px 28px 32px 38px 42px 48px 64px 76px;
     }
 }
 
-.text-f-2-4-2 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-2-4-2 {
+    font-family: 'Merriweather', serif;
     font-weight: 400;
     @include font(2);
     @include leading(2);
 }
 
-.text-f-3-4-3 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-3-4-3 {
+    font-family: 'Merriweather', serif;
     font-weight: 400;
     @include font(3);
     @include leading(3);
 }
 
-.text-f-4-4-4 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-4-4-4 {
+    font-family: 'Merriweather', serif;
     font-weight: 400;
     @include font(4);
     @include leading(4);
 }
 
-.text-f-5-4-5 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-5-4-5 {
+    font-family: 'Merriweather', serif;
     font-weight: 400;
     @include font(5);
     @include leading(5);
@@ -76,149 +76,145 @@ $leading: 20px 28px 32px 38px 42px 48px 64px 76px;
     // }
 }
 
-.text-f-6-4-6 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-6-4-6 {
+    font-family: 'Merriweather', serif;
     font-weight: 400;
     @include font(6);
     @include leading(6);
 }
 
-.text-f-7-4-7 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-7-4-7 {
+    font-family: 'Merriweather', serif;
     font-weight: 400;
     @include font(7);
     @include leading(7);
 }
 
-.text-f-8-4-8 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-8-4-8 {
+    font-family: 'Merriweather', serif;
     font-weight: 400;
-    @include font(8);
-    @include leading(8);
-}
-
-//500>medium
-.text-f-1-5-1 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-weight: 500;
-    @include font(1);
-    @include leading(1);
-}
-
-.text-f-2-5-2 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-weight: 500;
-    @include font(2);
-    @include leading(2);
-}
-
-.text-f-3-5-3 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-weight: 500;
-    @include font(3);
-    @include leading(3);
-    @media screen and (max-width: 500px) {
-        font-size: 20px;
-    }
-}
-
-.text-f-4-5-4 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-weight: 500;
-    @include font(4);
-    @include leading(4);
-    // @media screen and (max-width: 500px) {
-    //     @include font(3);
-    //     @include leading(3);
-    // }
-}
-
-.text-f-5-5-5 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-weight: 500;
-    @include font(5);
-    @include leading(5);
-}
-
-.text-f-6-5-6 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-weight: 500;
-    @include font(6);
-    @include leading(6);
-}
-
-.text-f-7-5-7 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-weight: 500;
-    @include font(7);
-    @include leading(7);
-}
-
-.text-f-8-5-8 {
-    font-family: 'Frank Ruhl Libre', serif;
-    font-weight: 500;
     @include font(8);
     @include leading(8);
 }
 
 //700>bold
-.text-f-1-7-1 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-1-7-1 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     @include font(1);
     @include leading(1);
 }
 
-.text-f-2-7-2 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-2-7-2 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     @include font(2);
     @include leading(2);
 }
 
-.text-f-3-7-3 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-3-7-3 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     @include font(3);
     @include leading(3);
 }
 
-.text-f-4-7-4 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-4-7-4 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     @include font(4);
     @include leading(4);
 }
 
-.text-f-5-7-5 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-5-7-5 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     @include font(5);
     @include leading(5);
 }
 
-.text-f-6-7-6 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-6-7-6 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     @include font(6);
     @include leading(6);
 }
 
-.text-f-7-7-7 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-7-7-7 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     @include font(7);
     @include leading(7);
 }
 
-.text-f-8-7-8 {
-    font-family: 'Frank Ruhl Libre', serif;
+.text-m-8-7-8 {
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     @include font(8);
     @include leading(8);
     @media screen and (max-width: 500px) {
         font-size: 26px;
     }
+}
+
+//900>bold
+.text-m-1-9-1 {
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	@include font(1);
+	@include leading(1);
+}
+
+.text-m-2-9-2 {
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	@include font(2);
+	@include leading(2);
+}
+
+.text-m-3-9-3 {
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	@include font(3);
+	@include leading(3);
+}
+
+.text-m-4-9-4 {
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	@include font(4);
+	@include leading(4);
+}
+
+.text-m-5-9-5 {
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	@include font(5);
+	@include leading(5);
+}
+
+.text-m-6-9-6 {
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	@include font(6);
+	@include leading(6);
+}
+
+.text-m-7-9-7 {
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	@include font(7);
+	@include leading(7);
+}
+
+.text-m-8-9-8 {
+	font-family: 'Merriweather', serif;
+	font-weight: 900;
+	@include font(8);
+	@include leading(8);
+	@media screen and (max-width: 500px) {
+			font-size: 26px;
+	}
 }
 
 //

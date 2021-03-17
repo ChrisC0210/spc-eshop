@@ -5,7 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Hind+Guntur:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@400;500&family=Merriweather:wght@400;700;900&display=swap");
 :root {
   --blue:#007bff;
   --indigo:#6610f2;
@@ -11923,8 +11923,8 @@ address, caption, cite, code, dfn, em, var {
   font-weight: 500 !important;
 }
 
-.text-f-1-4-1 {
-  font-family: 'Frank Ruhl Libre', serif;
+.text-m-1-4-1 {
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -11932,203 +11932,203 @@ address, caption, cite, code, dfn, em, var {
 }
 
 @media screen and (max-width: 500px) {
-  .text-f-1-4-1 {
+  .text-m-1-4-1 {
     font-size: 14px;
   }
 }
 
-.text-f-2-4-2 {
-  font-family: 'Frank Ruhl Libre', serif;
+.text-m-2-4-2 {
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
   line-height: 28px;
 }
 
-.text-f-3-4-3 {
-  font-family: 'Frank Ruhl Libre', serif;
+.text-m-3-4-3 {
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
   line-height: 32px;
 }
 
-.text-f-4-4-4 {
-  font-family: 'Frank Ruhl Libre', serif;
+.text-m-4-4-4 {
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 30px;
   line-height: 38px;
 }
 
-.text-f-5-4-5 {
-  font-family: 'Frank Ruhl Libre', serif;
+.text-m-5-4-5 {
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;
   line-height: 42px;
 }
 
-.text-f-6-4-6 {
-  font-family: 'Frank Ruhl Libre', serif;
+.text-m-6-4-6 {
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 40px;
   line-height: 48px;
 }
 
-.text-f-7-4-7 {
-  font-family: 'Frank Ruhl Libre', serif;
+.text-m-7-4-7 {
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 50px;
   line-height: 64px;
 }
 
-.text-f-8-4-8 {
-  font-family: 'Frank Ruhl Libre', serif;
+.text-m-8-4-8 {
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 48px;
   line-height: 50px;
   line-height: 76px;
 }
 
-.text-f-1-5-1 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 500;
+.text-m-1-7-1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   line-height: 20px;
 }
 
-.text-f-2-5-2 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 500;
+.text-m-2-7-2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   line-height: 28px;
 }
 
-.text-f-3-5-3 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 500;
+.text-m-3-7-3 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 30px;
   line-height: 32px;
 }
 
+.text-m-4-7-4 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  line-height: 38px;
+}
+
+.text-m-5-7-5 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  line-height: 42px;
+}
+
+.text-m-6-7-6 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  line-height: 48px;
+}
+
+.text-m-7-7-7 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  line-height: 64px;
+}
+
+.text-m-8-7-8 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 50px;
+  line-height: 76px;
+}
+
 @media screen and (max-width: 500px) {
-  .text-f-3-5-3 {
-    font-size: 20px;
+  .text-m-8-7-8 {
+    font-size: 26px;
   }
 }
 
-.text-f-4-5-4 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
-  line-height: 38px;
-}
-
-.text-f-5-5-5 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 500;
-  font-size: 26px;
-  line-height: 30px;
-  line-height: 42px;
-}
-
-.text-f-6-5-6 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 40px;
-  line-height: 48px;
-}
-
-.text-f-7-5-7 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 50px;
-  line-height: 64px;
-}
-
-.text-f-8-5-8 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 50px;
-  line-height: 76px;
-}
-
-.text-f-1-7-1 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 700;
+.text-m-1-9-1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
   font-size: 14px;
   line-height: 20px;
   line-height: 20px;
 }
 
-.text-f-2-7-2 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 700;
+.text-m-2-9-2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
   font-size: 18px;
   line-height: 20px;
   line-height: 28px;
 }
 
-.text-f-3-7-3 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 700;
+.text-m-3-9-3 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
   font-size: 20px;
   line-height: 30px;
   line-height: 32px;
 }
 
-.text-f-4-7-4 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 700;
+.text-m-4-9-4 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
   font-size: 24px;
   line-height: 30px;
   line-height: 38px;
 }
 
-.text-f-5-7-5 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 700;
+.text-m-5-9-5 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
   font-size: 26px;
   line-height: 30px;
   line-height: 42px;
 }
 
-.text-f-6-7-6 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 700;
+.text-m-6-9-6 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
   font-size: 30px;
   line-height: 40px;
   line-height: 48px;
 }
 
-.text-f-7-7-7 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 700;
+.text-m-7-9-7 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
   font-size: 40px;
   line-height: 50px;
   line-height: 64px;
 }
 
-.text-f-8-7-8 {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-weight: 700;
+.text-m-8-9-8 {
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
   font-size: 48px;
   line-height: 50px;
   line-height: 76px;
 }
 
 @media screen and (max-width: 500px) {
-  .text-f-8-7-8 {
+  .text-m-8-9-8 {
     font-size: 26px;
   }
 }
@@ -12466,172 +12466,6 @@ address, caption, cite, code, dfn, em, var {
      object-fit: cover;
   -webkit-box-shadow: 0 0 0.5em #8a8a8a;
           box-shadow: 0 0 0.5em #8a8a8a;
-}
-
-.spc-top {
-  height: 80px;
-  background-color: #274778;
-}
-
-.spc-top::after {
-  content: " ";
-  background-color: #96172E;
-  height: 10px;
-  width: 100%;
-  position: absolute;
-  bottom: -10px;
-  right: 0;
-  z-index: 2;
-}
-
-.spc-top ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-decoration: none;
-}
-
-.spc-top ul li {
-  list-style: none;
-  padding: 0px 0px 0 0;
-}
-
-.spc-top ul a {
-  color: #fefefe;
-  background-color: #274778;
-}
-
-.spc-top .dropdown-menu {
-  margin: 0;
-  padding: 0;
-}
-
-.spc-top .nav-right {
-  position: absolute;
-  right: 40px;
-  top: -14px;
-}
-
-@media screen and (max-width: 1024px) {
-  .spc-top {
-    height: 100%;
-    background-color: #274778;
-    overflow: scroll;
-  }
-}
-
-.spc-top-2 {
-  height: 70px;
-  background-color: #fefefe;
-  position: relative;
-}
-
-.spc-top-2 ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-decoration: none;
-}
-
-.spc-top-2 ul li {
-  list-style: none;
-  padding: 24px 24px 0 0;
-}
-
-.spc-top-2 ul a {
-  color: #274778;
-}
-
-.spc-top-2 .nav-right {
-  position: absolute;
-  right: 40px;
-  top: -14px;
-}
-
-@media screen and (max-width: 800px) {
-  .spc-top-2 {
-    display: none;
-  }
-}
-
-.spc-nav {
-  width: 100%;
-  height: 80px;
-  background: black;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.637)), to(rgba(255, 255, 255, 0.8)));
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.637) 0%, rgba(255, 255, 255, 0.8) 100%);
-}
-
-.spc-nav img {
-  width: 174px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 4px 0px 0 0;
-}
-
-.spc-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-decoration: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-.spc-nav ul li {
-  list-style: none;
-  padding: 0px 20px 0 0;
-}
-
-.spc-nav ul a {
-  color: #fefefe;
-}
-
-.spc-nav .spc-red {
-  color: #96172E;
-}
-
-.spc-logo {
-  width: 174px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 0px 0px 0 0;
-}
-
-.side-categories {
-  background-color: #96172E;
-  position: fixed;
-  top: 54%;
-  right: 0px;
-  z-index: 999999;
-  font-size: 14px;
-}
-
-.side-categories li > a {
-  font-size: 14px;
-  line-height: 40px;
-  color: #fefefe;
-  padding: 0px 30px 0px 30px;
-  text-decoration: none;
-}
-
-.side-categories li:hover, .side-categories li :active, .side-categories li :focus {
-  text-decoration: none;
-  background-color: #C80C30;
-  color: #fefefe;
 }
 
 .bg-blue {
