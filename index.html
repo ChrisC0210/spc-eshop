@@ -8,6 +8,8 @@
 	<link rel="shortcut icon" type="image/x-icon" href="./assets/icon/spc.ico">
 	<link rel="stylesheet" href="./dist/css/all.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./dist/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="./dist/css/owl.theme.default.min.css" />
 </head>
 <style>
 	.swiper-slide {
@@ -195,9 +197,95 @@
 <div class="row mt-4 mb-4 text-center text-h-1-4-1 d-flex justify-content-center">
 	<h4 class="col-lg-5 col-sm-12 mt-4 mb-4 text-m-6-7-6 white spc-title">POPULAR PRODUCTS</h4>
 </div>
+<!-- card -->
+
+<!-- card -->
+<div class="container owl-carousel owl-theme owl-carousel-card">
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-product-1.png" class="card-img-top" alt="p1">
+			<div class="card-body text-h-1-4-1">
+				<h5 class="card-title text-h-1-4-1">Product Name</h5>
+				<p class="card-text text-h-1-4-1">$1234</p>
+			</div>
+		</div>
+	</a>
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-product-2.png" class="card-img-top" alt="p1">
+			<div class="card-body text-h-1-4-1">
+				<h5 class="card-title text-h-1-4-1">Product Name</h5>
+				<p class="card-text text-h-1-4-1">$1234</p>
+			</div>
+		</div>
+	</a>
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-product-3.png" class="card-img-top" alt="p1">
+			<div class="card-body text-h-1-4-1">
+				<h5 class="card-title text-h-1-4-1">Product Name</h5>
+				<p class="card-text text-h-1-4-1">$1234</p>
+			</div>
+		</div>
+	</a>
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-product-4.png" class="card-img-top" alt="p1">
+			<div class="card-body text-h-1-4-1">
+				<h5 class="card-title text-h-1-4-1">Product Name</h5>
+				<p class="card-text text-h-1-4-1">$1234</p>
+			</div>
+		</div>
+	</a>
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-product-5.png" class="card-img-top" alt="p1">
+			<div class="card-body text-h-1-4-1">
+				<h5 class="card-title text-h-1-4-1">Product Name</h5>
+				<p class="card-text text-h-1-4-1">$1234</p>
+			</div>
+		</div>
+	</a>
+</div>
+<!-- card -->
+
 <div class="row mt-4 mb-4 text-center text-h-1-4-1 d-flex justify-content-center">
 	<h4 class="col-lg-5 col-sm-12 mt-4 mb-4 text-m-6-7-6 white spc-title">Our Collections</h4>
 </div>
+<!-- card -->
+<div class="container owl-carousel owl-theme owl-carousel-collect mb-4">
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-collect-1.png" class="card-img-top" alt="p1">
+		</div>
+		<p class="text-m-4-7-4">Stationery</p>
+	</a>
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-collect-2.png" class="card-img-top" alt="p1">
+		</div>
+		<p class="text-m-4-7-4">Cups</p>
+	</a>
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-collect-3.png" class="card-img-top" alt="p1">
+		</div>
+		<p class="text-m-4-7-4">Badge</p>
+	</a>
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-collect-4.png" class="card-img-top" alt="p1">
+		</div>
+		<p class="text-m-4-7-4">Accessories</p>
+	</a>
+  <a href="#">
+		<div class="card">
+			<img src="./assets/img/spc-collect-5.png" class="card-img-top" alt="p1">
+		</div>
+		<p class="text-m-4-7-4">Mugs</p>
+	</a>
+</div>
+<!-- card -->
 <!-- newsletter -->
 <section class="container p-4 white text-h-2-4-2 gray-800 news-box" style="background-image:url(./assets/img/spc-banner-1.png);">
 	<div class="col-lg-8 col-sm-12">
@@ -262,7 +350,9 @@
 	<script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
 	<script src="./dist/js/swiper-bundle.min.js"></script>
 	<script src="./dist/js/aos.js"></script>
+	<script src="./dist/js/owl.carousel.min.js"></script>
 	<script>
+	$(document).ready(function(){
 		var swiper = new Swiper('.swiper-container', {
 			zoom: true,
       effect: 'fade',
@@ -279,6 +369,23 @@
         disableOnInteraction: false,
       },
 		});
+		//owl
+		$('.owl-carousel').owlCarousel({
+			margin:20,
+			loop:true,
+			items:4,
+			responsive:{
+				780:{
+					items:4,
+				},
+				480:{
+					items:1,
+				},
+			}
+		});
+	
+	
+	});
 	</script>
 
 </body>

@@ -62,3 +62,72 @@
 		width: 350px !important;
 	}
 }
+//owl card ===bs
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0px solid rgba(0, 0, 0, 0);
+	border-radius: 0rem;
+	//chris add
+	box-shadow: 0px 1px 1px #00000029;
+	-webkit-box-shadow: 0px 1px 1px #00000029;
+}
+.owl-carousel-card{
+	.card-img-top{
+		&:hover,:active{
+			background-color: $gray-500;
+			opacity: 0.5;
+			object-fit: scale-down;
+		}
+	}
+	a{
+		&:hover,:active{
+			text-decoration: none;
+			color: $spc-blue;
+			width: 100%;
+			&::after{
+				content: " View ";
+				font-size: 20px;
+				font-weight: 500;
+				position: absolute;
+				top:40%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+.owl-carousel-collect{
+	.card-img-top{
+		opacity: 0.5;
+		&:hover,:active, :focus{
+			background-color: $gray-500;
+			opacity: 0.5;
+			object-fit: scale-down;
+		}
+	}
+	p{
+		color: $spc-blue;
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	a{
+		&:hover,:active{
+			text-decoration: none;
+			color: $spc-blue;
+			width: 100%;
+	}
+}
+}
