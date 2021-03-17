@@ -93,9 +93,6 @@
   cursor: pointer;
 }
 
-.openBtn:hover {
-  //background: #bbb;
-}
 
 .overlay {
   height: 100%;
@@ -257,4 +254,10 @@ video::-webkit-media-controls-timeline {
 audio::-webkit-media-controls,
 video::-webkit-media-controls {
     display: none;
+}
+//spc-eshop
+.header-promotion{
+	background-color: $spc-red;
+	height: 30px;
+	width: 100%;
 }

@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@400;500&family=Merriweather:wght@400;700;900&display=swap');
 //
 //typography
-$font: 14px 18px 20px 24px 26px 30px 40px 48px;
+$font: 14px 18px 20px 24px 28px 30px 40px 48px;
 @mixin font($index:1) {
     font-size: nth($font, $index);
     line-height: line-height($index);

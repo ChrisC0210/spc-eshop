@@ -2,6 +2,20 @@
 	background-color: $spc-blue-400;
 	border-color: $spc-blue-400;
 	padding: 8px 50px 8px 50px;
+	&:hover,:active {
+		background-color: $spc-blue;
+		border-color: $spc-blue;
+	}
+}
+.btn-white {
+	background-color: $white;
+	border-color: $white;
+	color: $spc-blue;
+	padding: 8px 50px 8px 50px;
+	&:hover,:active {
+		background-color: $gray-300;
+		border-color: $gray-300;
+	}
 }
 
 .btn-pricing {

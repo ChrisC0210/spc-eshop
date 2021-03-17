@@ -11964,7 +11964,7 @@ address, caption, cite, code, dfn, em, var {
 .text-m-5-4-5 {
   font-family: 'Merriweather', serif;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 30px;
   line-height: 42px;
 }
@@ -12028,7 +12028,7 @@ address, caption, cite, code, dfn, em, var {
 .text-m-5-7-5 {
   font-family: 'Merriweather', serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 30px;
   line-height: 42px;
 }
@@ -12098,7 +12098,7 @@ address, caption, cite, code, dfn, em, var {
 .text-m-5-9-5 {
   font-family: 'Merriweather', serif;
   font-weight: 900;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 30px;
   line-height: 42px;
 }
@@ -12174,7 +12174,7 @@ address, caption, cite, code, dfn, em, var {
 .text-h-5-4-5 {
   font-family: 'Hind Guntur', sans-serif;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 30px;
   line-height: 42px;
 }
@@ -12238,7 +12238,7 @@ address, caption, cite, code, dfn, em, var {
 .text-h-5-5-5 {
   font-family: 'Hind Guntur', sans-serif;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 30px;
   line-height: 42px;
 }
@@ -12287,6 +12287,23 @@ address, caption, cite, code, dfn, em, var {
   background-color: #3A6AB5;
   border-color: #3A6AB5;
   padding: 8px 50px 8px 50px;
+}
+
+.btn-primary:hover, .btn-primary :active {
+  background-color: #274778;
+  border-color: #274778;
+}
+
+.btn-white {
+  background-color: #fefefe;
+  border-color: #fefefe;
+  color: #274778;
+  padding: 8px 50px 8px 50px;
+}
+
+.btn-white:hover, .btn-white :active {
+  background-color: #dee2e6;
+  border-color: #dee2e6;
 }
 
 .btn-pricing {
@@ -12412,6 +12429,88 @@ address, caption, cite, code, dfn, em, var {
   background-color: #C80C30;
   color: #fefefe;
   padding: 10px 200px 10px 20px;
+}
+
+.card-bg {
+  margin-bottom: 40px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.card-bg:hover .img-fluid, .card-bg :active .img-fluid {
+  -webkit-transform: scale(0.95, 0.95);
+          transform: scale(0.95, 0.95);
+}
+
+.card-bg:hover::after, .card-bg :active::after {
+  bottom: 0px;
+  left: 0px;
+  -webkit-transform: translate(0px, 0%);
+          transform: translate(0px, 0%);
+}
+
+@media screen and (max-width: 1290px) {
+  .card-bg {
+    margin-bottom: 0px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .card-bg {
+    margin-bottom: 0px;
+  }
+  .card-bg .img-fluid {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.card-bg::after {
+  content: "";
+  background-color: #274778;
+  height: 318px;
+  width: 520px;
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  z-index: -1;
+  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+}
+
+@media screen and (max-width: 1290px) {
+  .card-bg::after {
+    bottom: 0px;
+    left: 0px;
+    height: 00%;
+    width: 100%;
+  }
+}
+
+.spc-title {
+  padding: 10px 0 10px 0;
+  background-color: #96172E;
+}
+
+.news-box {
+  height: 280px;
+}
+
+@media screen and (max-width: 798px) {
+  .news-box {
+    height: 450px;
+  }
+}
+
+.news-input {
+  width: 551px !important;
+}
+
+@media screen and (max-width: 798px) {
+  .news-input {
+    width: 350px !important;
+  }
 }
 
 .img-big {
@@ -12654,40 +12753,10 @@ address, caption, cite, code, dfn, em, var {
   text-decoration: none;
 }
 
-.footer-link a {
-  color: #fefefe;
-}
-
-.footer-spc-logo {
-  margin-bottom: 20px;
-}
-
-.footer-spc-logo img {
-  width: 200px;
-}
-
-@media screen and (max-width: 500px) {
-  .footer-spc-logo img {
-    width: 170px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .footer-box p {
-    text-align: center;
-  }
-}
-
-.red-line {
-  background-color: #96172E;
-  height: 10px;
+.footer-end {
+  background-color: #274778;
+  height: 60px;
   width: 100%;
-}
-
-footer {
-  width: 100%;
-  padding: 10px;
-  margin-top: 0px;
 }
 
 .swiper-container-1 {
@@ -13004,6 +13073,12 @@ video::-webkit-media-controls-timeline {
 audio::-webkit-media-controls,
 video::-webkit-media-controls {
   display: none;
+}
+
+.header-promotion {
+  background-color: #96172E;
+  height: 30px;
+  width: 100%;
 }
 
 .breadcrumb {

@@ -1,0 +1,64 @@
+.card-bg{
+	margin-bottom: 40px;
+	transition: all .3s ease-out;
+
+	&:hover,:active {
+		.img-fluid{
+			transform: scale(0.95, 0.95);
+			//object-fit: contain;
+		}
+		&::after{
+			bottom: 0px;
+			left: 0px;
+			transform: translate(0px, 0%);
+		}
+	}
+	@media screen and (max-width: 1290px) {
+		margin-bottom: 0px;
+		margin-right: 10px;
+	}
+	@media screen and (max-width: 798px) {
+		margin-bottom: 0px;
+		.img-fluid{
+			height: 100%;
+			width: 100%;
+		}
+	}
+	&::after{
+		content: "";
+		background-color: $spc-blue;
+		height: 318px;
+		width: 520px;
+		position: absolute;
+		bottom: -20px;
+		left: -20px;
+		z-index: -1;
+		box-shadow: 0px 3px 6px #00000029;
+		-webkit-box-shadow: 0px 3px 6px #00000029;
+		
+		@media screen and (max-width: 1290px) {
+			bottom: 0px;
+			left: 0px;
+			height: 00%;
+			width: 100%;
+		}
+	}
+}
+//spc-title
+.spc-title{
+	padding: 10px 0 10px 0;
+	background-color: $spc-red;
+}
+//news
+.news-box{
+	height: 280px;
+	@media screen and (max-width: 798px) {
+		height: 450px;
+	}
+}
+.news-input{
+	width: 551px !important;
+	@media screen and (max-width: 798px) {
+		width: 350px !important;
+	}
+}
