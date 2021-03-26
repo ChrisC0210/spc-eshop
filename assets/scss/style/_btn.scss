@@ -144,3 +144,43 @@
 		padding: 10px 200px 10px 20px;
 	}
 }
+//share-button
+.share-button{
+	position: absolute;
+	right: 0;
+	img{
+		margin-right: 8px;
+		color: $gray-800;
+		//background-color: $gray-800;
+	}
+	.icon {
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		background-size: cover;
+		margin-right: 8px;
+	}
+	//https://codepen.io/sosuke/pen/Pjoqqp
+	//CSS filter generator to convert from black to target hex color
+	.icon-fb{
+		//#757575
+		filter: invert(48%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(95%) contrast(85%);
+		&:hover,:active,:focus{
+			//#F2D465
+			filter: invert(89%) sepia(31%) saturate(794%) hue-rotate(343deg) brightness(99%) contrast(91%);			}
+	}
+	.icon-ig{
+		filter: invert(48%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(95%) contrast(85%);
+		&:hover,:active,:focus{
+			filter: invert(89%) sepia(31%) saturate(794%) hue-rotate(343deg) brightness(99%) contrast(91%);			}
+	}
+	.icon-yt{
+		filter: invert(48%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(95%) contrast(85%);
+		&:hover,:active,:focus{
+			filter: invert(89%) sepia(31%) saturate(794%) hue-rotate(343deg) brightness(99%) contrast(91%);			}
+	}
+	// .icon-bike:hover,
+	// .icon-bike:focus {
+	// 	filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+	// }
+}
