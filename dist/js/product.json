@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "category": "apparel",
+    "name": "jacket",
+    "image": "./assets/img/spc-product-1.png",
+    "price": 80
+  },
+  {
+    "id": 2,
+    "category": "apparel",
+    "name": "sweater",
+    "image": "./assets/img/spc-product-1.png",
+    "price": 80
+  },
+  {
+    "id": 3,
+    "category": "apparel",
+    "name": "polo",
+    "image": "./assets/img/spc-product-1.png",
+    "price": 80
+  },
+  {
+    "id": 4,
+    "category": "apparel",
+    "name": "t-shirt",
+    "image": "./assets/img/spc-product-1.png",
+    "price": 80
+  },
+  {
+    "id": 5,
+    "category": "apparel",
+    "name": "shorts",
+    "image": "./assets/img/spc-product-1.png",
+    "price": 80
+  }
+]
