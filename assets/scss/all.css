@@ -12489,11 +12489,6 @@ address, caption, cite, code, dfn, em, var {
   transition: all .3s ease-out;
 }
 
-.card-bg:hover .img-fluid, .card-bg :active .img-fluid {
-  -webkit-transform: scale(0.95, 0.95);
-          transform: scale(0.95, 0.95);
-}
-
 .card-bg:hover::after, .card-bg :active::after {
   bottom: 0px;
   left: 0px;
