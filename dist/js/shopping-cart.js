@@ -1,245 +1,208 @@
-$(document).ready(function () {
-	//Add product to cart
-	$('.add-to-cart').on('click', (e) => {
-		addToCart(e.currentTarget)
-	})
-	
-	const addToCart = (product) => {
-		const productId = $(product).attr('productId');
-		const isAlreadyInCart = $.grep(productsInCart, el => {return el.id == productId}).length;
-	
-		if (isAlreadyInCart) {
-			$.each(storageData, (i, el) => {
-				if (productId == el.id) {
-					el.itemsNumber += 1;
-				}
-			})
-		} else {
-			const newProduct = {
-				id: Number(productId),
-				itemsNumber: 1
-			}
-	
-			storageData.push(newProduct);
-		}
-	
-		updateCart();
-		updateProductList();
-	}
-	//Import Product
-	$(document).ready(() => {
-		let storageData = [];
-	
-		$.get("./product.json", (res) => {
-			productList = res;
-	
-			const isStorageEmpty = Cookies.getStorage('cart').length === 0;
-	
-			if (!isStorageEmpty) {
-				storageData = Cookies.getStorage('cart');
-			}
-	
-			updateCart();
-			buildProductList();
-			buildDropdownCart();
-			bindProductEvents();
-		});
-	});
-	//Parse product id and update cart
-	const updateCart = () => {
-		Cookies.setStorage('cart', storageData);
-		productsInCart = [];
-	
-		parseStorageDataWithProduct();
-		updatePill();
-		updateTotalAmount();
-	}
-	
-	const parseStorageDataWithProduct = () => {
-		$.each(storageData, (i, el) => {
-			const id = el.id;
-			const itemsNumber = el.itemsNumber;
-	
-			$.each(productList, (i, el) => {
-				if (id == el.id) {
-					el.itemsNumber = itemsNumber;
-					productsInCart.push(el)
-				}
-			});
-		});
-	}
-	
-	const updatePill = () => {
-		let itemsInCart = 0;
-	
-		$.each(productsInCart, (i, el) => {
-			itemsInCart += el.itemsNumber;
-		});
-	
-		$('.badge-pill').html(itemsInCart);
-	}
-	
-	const updateTotalAmount = () => {
-		let total = 0;
-		const shippingCost = 0;
-		let summary = (total + shippingCost).toFixed(2);
-	
-		$.each(productsInCart, (i, el) => {
-			total += el.itemsNumber * el.price;
-		});
-	
-		$('#total-price').html(`$${total.toFixed(2)}`);
-		$('#shipping-price').html(shippingCost === 0 ? 'Free' : `$${shippingCost}`);
-		$('#summary').html(`$${summary}`);
-	}
-	//Build Product template
-	const dropdownProductsTemplate = (product) => {
-		return `
-			<div id="${product.id}-dropdown" class="product row">
-				<div class="col-4 px-2">
-					<div class="view zoom overlay z-depth-1 rounded mb-md-0">
-						<img class="img-fluid w-100" src="${product.image}" alt="Sample">
-					</div>
-				</div>
-				<div class="col-5 px-2">
-					<span>${product.name}</span>
-					<p class="mb-0"><span><strong class="price">$${(product.price * product.itemsNumber).toFixed(2)}</strong></span></p>
-				</div>
-				<div class="col-2 pl-0 pr-2">
-					<a href="#!" type="button" class="remove-product"><i class="fas fa-trash-alt"></i></a>
-				</div>
-			</div>
-			</div>
-			<hr class="mb-4">
-		`
-	}
-	
-	const productsTemplate = (product) => {
-		return `
-			<div id="${product.id}" class="product row mb-4">
-				<div class="col-md-5 col-lg-3 col-xl-3">
-					<div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-						<img class="img-fluid w-100" src="${product.image}" alt="Sample">
-						<a href="#!">
-							<div class="mask waves-effect waves-light">
-								<img class="img-fluid w-100" src="${product.image}">
-								<div class="mask rgba-black-slight waves-effect waves-light"></div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-7 col-lg-9 col-xl-9">
-					<div>
-						<div class="d-flex justify-content-between">
-							<div>
-								<h5>${product.name}</h5>
-								<p class="mb-3 text-muted text-uppercase small">${product.category} - ${product.color}</p>
-								<p class="mb-2 text-muted text-uppercase small">Color: ${product.color}</p>
-								<p class="mb-3 text-muted text-uppercase small">Size: ${product.size}</p>
-							</div>
-							<div>
-								<div class="def-number-input number-input safari_only mb-0 w-100">
-									<button class="minus decrease"></button>
-									<input class="quantity" min="0" name="quantity" value="${product.itemsNumber}" type="number">
-									<button class="plus increase"></button>
-								</div>
-								<small id="passwordHelpBlock" class="form-text text-muted text-center"> (Note, 1 piece) </small>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between align-items-center">
-							<div>
-								<a href="#!" type="button" class="remove-product card-link-secondary small text-uppercase mr-3"><i class="fas fa-trash-alt mr-1"></i> Remove item </a>
-								<a href="#!" type="button" class="card-link-secondary small text-uppercase"><i class="fas fa-heart mr-1"></i> Move to wish list </a>
-							</div>
-							<p class="mb-0"><span><strong class="price">$${(product.price * product.itemsNumber).toFixed(2)}</strong></span></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<hr class="mb-4">
-		`
-	};
-	//Render products
-	const buildProductList = () => {
-		$.each(productsInCart, (i, el) => {
-			const product = renderProducts(el)
-			$('#product-list').append(product);
-		})
-	}
-	
-	const buildDropdownCart = () => {
-		$.each(productsInCart, (i, el) => {
-			const product = renderDropdownProducts(el);
-			$('#dropdown-cart').append(product)
-		})
-	}
-	
-	const bindProductEvents = () => {
-		$('button.increase').on('click', (e) => {
-			increaseProductQuantity(e.currentTarget);
-		});
-	
-		$('button.decrease').on('click', (e) => {
-			subtractProductQuantity(e.currentTarget);
-		});
-	
-		$('a.remove-product').on('click', (e) => {
-			removeProduct(e.currentTarget);
-		});
-	}
-	//Increase, decrease quantity and remove product.
-	const increaseProductQuantity = (product) => {
-		const productId = $(product).parents('.product').get(0).id
-		const price = $.grep(productsInCart, el => { return el.id == productId })[0].price;
-	
-		$.each(storageData, (i, el) => {
-			if (el.id == productId) {
-				el.itemsNumber += 1
-				$(product).siblings('.quantity').val(el.itemsNumber);
-				$(`#${productId}`).find('.price').html(`$${(price * el.itemsNumber).toFixed(2)}`);
-				$(`#${productId}-dropdown`).find('.price').html(`$${(price * el.itemsNumber).toFixed(2)}`);
-			}
-		});
-	
-		updateCart();
-	}
-	
-	const subtractProductQuantity = (product) => {
-		const productId = $(product).parents('.product').get(0).id
-		const price = $.grep(productsInCart, el => { return el.id == productId })[0].price;
-		let itemsInCart = $.grep(productsInCart, el => { return el.id == productId })[0].itemsNumber;
-	
-		if (itemsInCart > 0 ) {
-			storageData.map( el => {
-				if (el.id == productId) {
-					el.itemsNumber -= 1
-					$(product).siblings('.quantity').val(el.itemsNumber)
-					$(`#${productId}`).find('.price').html(`$${(price * el.itemsNumber).toFixed(2)}`);
-					$(`#${productId}-dropdown`).find('.price').html(`$${(price * el.itemsNumber).toFixed(2)}`);
-				}
-			});
-	
-			updateCart();
-		};
-	}
-	
-	const removeProduct = (product) => {
-		const productId = $(product).parents('.product').get(0).id
-	
-		storageData = $.grep(storageData, (el, i) => {
-			return el.id != productId
-		});
-	
-		updateCart();
-		updateProductList();
-	}
-	//Update product list
-	const updateProductList = () => {
-		$('#product-list').empty();
-		buildProductList();
-		$('#dropdown-cart').empty();
-		buildDropdownCart();
-		bindProductEvents();
-	}
-	//
+// ************************************************
+// Shopping Cart API
+// ************************************************
+
+var shoppingCart = (function() {
+  // =============================
+  // Private methods and propeties
+  // =============================
+  cart = [];
+  
+  // Constructor
+  function Item(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  
+  // Save cart
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  
+    // Load cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  
+
+  // =============================
+  // Public methods and propeties
+  // =============================
+  var obj = {};
+  
+  // Add to cart
+  obj.addItemToCart = function(name, price, count) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  }
+  // Set count from item
+  obj.setCountForItem = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
+  // Remove item from cart
+  obj.removeItemFromCart = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count --;
+          if(cart[item].count === 0) {
+            cart.splice(item, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
+
+  // Remove all items from cart
+  obj.removeItemFromCartAll = function(name) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
+
+  // Clear cart
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
+
+  // Count cart 
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
+
+  // Total cart
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2));
+  }
+
+  // List cart
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
+
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+
+  // cart : Array
+  // Item : Object/Class
+  // addItemToCart : Function
+  // removeItemFromCart : Function
+  // removeItemFromCartAll : Function
+  // clearCart : Function
+  // countCart : Function
+  // totalCart : Function
+  // listCart : Function
+  // saveCart : Function
+  // loadCart : Function
+  return obj;
+})();
+
+
+// *****************************************
+// Triggers / Events
+// ***************************************** 
+// Add item
+$('.add-to-cart').click(function(event) {
+  event.preventDefault();
+  var name = $(this).data('name');
+  var price = Number($(this).data('price'));
+  shoppingCart.addItemToCart(name, price, 1);
+  displayCart();
 });
+
+// Clear items
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+
+
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for(var i in cartArray) {
+    output += "<tr>"
+      + "<td>" + cartArray[i].name + "</td>" 
+      //+ "<td>(" + cartArray[i].price + ")</td>"
+      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class='col-2 item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + " = " 
+      + "<td>" + cartArray[i].total + "</td>" 
+      +  "</tr>";
+  }
+  $('.show-cart').html(output);
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
+}
+
+// Delete item button
+
+$('.show-cart').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+})
+
+
+// -1
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
+// +1
+$('.show-cart').on("click", ".plus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.addItemToCart(name);
+  displayCart();
+})
+
+// Item count input
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+  displayCart();
+});
+
+displayCart();
