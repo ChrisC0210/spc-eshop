@@ -184,3 +184,17 @@
 	// 	filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 	// }
 }
+//@at-root}
+.gray-btn{
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0 12px 0;
+  border-radius: 2px;
+  border: solid 1px #fefefe;
+  background-color: $gray-700;
+  color: $white;
+  &:hover, &:active{
+    background-color: $gray-800;
+    border: solid 1px #fefefe;
+  }
+}

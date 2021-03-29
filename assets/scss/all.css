@@ -12468,6 +12468,21 @@ address, caption, cite, code, dfn, em, var {
           filter: invert(89%) sepia(31%) saturate(794%) hue-rotate(343deg) brightness(99%) contrast(91%);
 }
 
+.gray-btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 12px 0 12px 0;
+  border-radius: 2px;
+  border: solid 1px #fefefe;
+  background-color: #767676;
+  color: #fefefe;
+}
+
+.gray-btn:hover, .gray-btn:active {
+  background-color: #414141;
+  border: solid 1px #fefefe;
+}
+
 .card-bg {
   margin-bottom: 40px;
   -webkit-transition: all .3s ease-out;
