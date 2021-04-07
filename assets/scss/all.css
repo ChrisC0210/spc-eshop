@@ -12489,11 +12489,22 @@ address, caption, cite, code, dfn, em, var {
   transition: all .3s ease-out;
 }
 
+.card-bg:hover .img-fluid, .card-bg :active .img-fluid {
+  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+}
+
 .card-bg:hover::after, .card-bg :active::after {
-  bottom: 0px;
-  left: 0px;
-  -webkit-transform: translate(0px, 0%);
-          transform: translate(0px, 0%);
+  content: "";
+  background-color: #274778;
+  height: 318px;
+  width: 520px;
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  z-index: -1;
+  box-shadow: 0px 3px 6px #00000029;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
 }
 
 @media screen and (max-width: 1290px) {
@@ -12508,8 +12519,8 @@ address, caption, cite, code, dfn, em, var {
     margin-bottom: 0px;
   }
   .card-bg .img-fluid {
-    height: 100%;
-    width: 100%;
+    box-shadow: 0px 3px 6px #00000029;
+    -webkit-box-shadow: 0px 3px 6px #00000029;
   }
 }
 
