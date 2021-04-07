@@ -161,7 +161,7 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
-    output += "<tr id='cartt' class='col-12 row d-flex justify-content-center has-cart' style='overflow-x:scroll;'>"
+    output += "<tr id='cartt' class='row d-flex justify-content-center has-cart' style='overflow-x:scroll;'>"
       + "<td style='border-top:#fff;'>" + "<img style='width: 50px;' src= './assets/img/spc-product-5.png'></img>"+ "</td>" 
       + "<td style='border-top:#fff;'>" + cartArray[i].name + "</td>" 
       + "<td style='border-top:#fff;'>(" + cartArray[i].price + ")</td>"

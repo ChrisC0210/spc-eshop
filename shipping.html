@@ -89,32 +89,94 @@
 				<a class="spc-blue" href="./login.html">Login</a> to make checkout even quicker!
 			</div>
 		</div>
-		<div class=" d-flex justify-content-center">
+		<div class="col-12 row d-flex justify-content-center">
+        <!-- Order info -->
+				<div class="col-10">
+					<h3 class="mt-4 mb-4 text-m-3-7-3 spc-blue">Order info</h3>
+					<div class="jumbotron jumbotron-fluid text-h-1-4-1">
+						<div class="mb-4 pr-4 pl-4">
+							<!-- title -->
+							<section class="text-h-2-4-2 mb-4 d-flex justify-content-between">
+								<div class=" ">
+									<p>Product</p>
+								</div>
+								<div class=" ">
+									<p class=" ">Price</p>
+								</div>
+							</section>
+							<hr>
+							<!-- card start -->
+							<section class="row d-flex justify-content-between">
+								<div class="col-lg-2 col-md-2 col-sm-2">
+									<img style="width: 50px;" src="./assets/img/spc-product-1.png" alt="product img" class="d-flex justify-content-center product-img">
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-12">
+									<p class="text-r-1-4-1">Umbrellas</p>
+									<div class="d-flex justify-content-between">
+										<p>QTY: 1</p>
+										<p>$120</p>
+									</div>
+								</div>
+							</section>
+							<!-- card end -->
+							<div>
+								<hr size="8px" align="center" width="100%">
+							</div>
+							<!-- card start -->
+							<section class="row d-flex justify-content-between">
+								<div class="col-lg-2 col-md-2 col-sm-2">
+									<img style="width: 50px;" src="./assets/img/spc-product-3.png" alt="product img" class="d-flex justify-content-center product-img">
+								</div>
+								<div class="col-lg-8 col-md-8 col-sm-12">
+									<p class="text-r-1-4-1">Keychains</p>
+									<div class="d-flex justify-content-between">
+										<p>QTY: 1</p>
+										<p>$80</p>
+									</div>
+								</div>
+							</section>
+							<!-- card end -->
+							<div>
+								<hr size="8px" align="center" width="100%">
+							</div>
+							<!-- price start -->
+							<div class="d-flex justify-content-between">
+								<p>Shipping</p>
+								<p>0</p>
+							</div>
+							<div class="d-flex justify-content-between text-r-2-4-2">
+								<p>Total</p>
+								<p>$200</p>
+							</div>
+							<!-- price end -->
+						</div>
+					</div>
+				</div>
+        <!-- Order info -->
+				<!-- Billing Address -->
+				<div class="col-10">
+					<h3 class="mt-4 mb-4 text-m-3-7-3 spc-blue">Billing Address</h3>
+					<div class="jumbotron jumbotron-fluid text-h-1-4-1">
+						<div class="container">
+							<div class="mb-4">
+								<div>Contact: 123@gmail.com</div>
+								<hr>
+								<div>Ship to: 69 Bonham Road, Hong Kong.</div>
+							</div>
+							<a class="spc-blue" href="./checkout.html">Change</a>
+						</div>
+					</div>
+				</div>
+				<!-- Billing Address -->
+		<div class="col-10 col-sm-12 mr-lg-4 d-flex justify-content-center">
 			<form name="form_checkout" action="/" method="post" id="needs-validation-confirm"
 				onsubmit="return validate_checkout()"
         class="col-lg-10 col-sm-12 needs-validation form-border gray-600 text-h-2-4-2" id="needs-validation" novalidate>
-        <!-- 123 -->
-        <!-- <div class="card">
-          <div class="card-body">
-            This is some text within a card body.
-          </div>
-        </div> -->
-        <div class="jumbotron jumbotron-fluid text-h-1-4-1">
-          <div class="container">
-            <div class="mb-4">
-              <div>Contact: 123@gmail.com</div>
-              <hr>
-              <div>Ship to: 69 Bonham Road, Hong Kong.</div>
-            </div>
-            <a class="spc-blue" href="./checkout.html">Change</a>
-          </div>
-        </div>
-        <!-- 123 -->
-        <h3 class="mt-4 mb-4 text-m-3-7-3 gray-800">Shipping</h3>
-        <fieldset class="form-group">
+        <h3 class="mt-4 mb-4 text-m-3-7-3 spc-blue">Shipping</h3>
+        <fieldset class="form-group text-h-2-4-2">
           <label for="exampleFormControlSelect1">How would you like your order shipped?</label>
           <!-- <legend class="col-form-label col-sm-2 float-sm-left pt-0">Radios</legend> -->
-          <div class="col-sm-10">
+          <div class="col-sm-12">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
               <label class="form-check-label" for="gridRadios1">
@@ -151,6 +213,7 @@
 				</div>
 			</form>
 		</div>
+	</div>
 
 	</div>
 	<!-- ABOUT  -->
