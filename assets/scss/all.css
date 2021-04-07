@@ -13373,6 +13373,22 @@ video::-webkit-media-controls {
   left: 50%;
 }
 
+.cart-empty-show {
+  display: none;
+}
+
+.icon-basket {
+  position: absolute;
+  right: 54px;
+  top: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .icon-basket {
+    right: 12px;
+  }
+}
+
 .breadcrumb {
   background-color: #fefefe;
   padding: .75rem 0rem;

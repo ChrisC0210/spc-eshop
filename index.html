@@ -67,7 +67,28 @@
 				</ul>
 			</div>
 			<div class="nav-right d-flex">
-				<a class="mr-4" href="./login.html">
+				<li class="nav-item dropdown" style="margin-top: -14px;">
+					<a class=" nav-link dropdown-toggle mb-4" href="#" id="dropdown0" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
+							<g id="Group_1072" data-name="Group 1072" transform="translate(-197 -210)">
+								<path id="Path_873" data-name="Path 873" d="M0,0H50V50H0Z" transform="translate(197 210)" fill="#fff" />
+								<g id="Group_1071" data-name="Group 1071" transform="translate(-14.182 -4.5)">
+									<ellipse id="Ellipse_98" data-name="Ellipse 98" cx="11.234" cy="11" rx="11.234" ry="11"
+										transform="translate(224.682 222.5)" fill="none" stroke="#707070" stroke-width="1" />
+									<path id="Path_870" data-name="Path 870"
+										d="M6894.073,3102.459s3.363-9.085,15.189-9.085,16.264,9.085,16.264,9.085"
+										transform="translate(-6673.392 -2846.459)" fill="none" stroke="#707070" stroke-width="1" />
+								</g>
+							</g>
+						</svg>
+						<span class="text-none">Login / Register </span></a>
+					<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown04">
+						<a class="dropdown-item" href="./login.html">Login / Register</a>
+						<a class="dropdown-item" href="./userInfo.html">User Info</a>
+					</div>
+				</li>
+				<!-- <a class="mr-4" href="./login.html">
 					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
 						<g id="Group_1072" data-name="Group 1072" transform="translate(-197 -210)">
 							<path id="Path_873" data-name="Path 873" d="M0,0H50V50H0Z" transform="translate(197 210)" fill="#fff" />
@@ -80,10 +101,10 @@
 							</g>
 						</g>
 					</svg>
-					<span class="text-none">Login / Register</span>
-				</a>
+					<span class="text-none dropdown">Login / Register</span>
+				</a> -->
 				<a type="button" data-toggle="modal" data-target="#cart">
-					<span class="spc-blue total-count" style="position: absolute; right: 54px;top:10px;">0</span>
+					<span class="spc-blue total-count icon-basket">0</span>
 					<svg id="icon-basket" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
 						<rect id="Rectangle_434" data-name="Rectangle 434" width="50" height="50" fill="none" />
 						<g id="Group_1001" data-name="Group 1001" transform="translate(-6882.778 -3087.228)">
@@ -105,6 +126,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
+				
         <h5 class="modal-title" id="exampleModalLabel">Basket</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -117,8 +139,9 @@
         <div>Total price: $<span class="total-cart"></span></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="./basket.html" class="btn btn-primary">View Basket</a>
+				<button class="clear-cart btn btn-secondary">Clear Cart</button>
+        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        <a href="./basket.html" type="button" class="btn btn-primary">View Basket</a>
       </div>
     </div>
   </div>

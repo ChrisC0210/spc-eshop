@@ -143,6 +143,7 @@ var shoppingCart = (function() {
 // Add item
 $('.add-to-cart').click(function(event) {
   event.preventDefault();
+  var img = $(this).data('img');
   var name = $(this).data('name');
   var price = Number($(this).data('price'));
   shoppingCart.addItemToCart(name, price, 1);
@@ -160,17 +161,17 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
-    output += "<tr class='col-12'>"
+    output += "<tr id='cartt' class='col-12 has-cart'>"
+      + "<td>" + "<img style='width: 50px;' src= './assets/img/spc-product-5.png'></img>"+ "</td>" 
       + "<td>" + cartArray[i].name + "</td>" 
       + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td>"
+      + "<td class=' '>"
       //+ "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-      + "<input type='number' class='col-4 item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<input type='number' class='col-12 item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
       //+ "<td>"
       //+ "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
       //+ "</td>"
       + "<td><button class='col-12 delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-      //+ "<td><button class='col-12 delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
       + " = " 
       + "<td class=' '>" + cartArray[i].total + "</td>" 
       +  "</tr>";
@@ -212,5 +213,18 @@ $('.show-cart').on("change", ".item-count", function(event) {
 
 displayCart();
 
+//
+if ($('#cartt').hasClass("has-cart")) {
+  $('.cart-empty').addClass('cart-empty-show');
+  $('#checkOut').removeClass('disabled');
+
+
+} else {
+  $('.cart-empty').removeClass('cart-empty-show');
+  $('#checkOut').addClass('disabled');
+
+
+
+}
 //
 });
