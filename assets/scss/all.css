@@ -13389,6 +13389,14 @@ video::-webkit-media-controls {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .delete-item {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+  }
+}
+
 .breadcrumb {
   background-color: #fefefe;
   padding: .75rem 0rem;

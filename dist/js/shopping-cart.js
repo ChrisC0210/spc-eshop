@@ -161,19 +161,21 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
-    output += "<tr id='cartt' class='col-12 has-cart'>"
-      + "<td>" + "<img style='width: 50px;' src= './assets/img/spc-product-5.png'></img>"+ "</td>" 
-      + "<td>" + cartArray[i].name + "</td>" 
-      + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td class=' '>"
-      //+ "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-      + "<input type='number' class='col-12 item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+    output += "<tr id='cartt' class='col-12 row d-flex justify-content-center has-cart' style='overflow-x:scroll;'>"
+      + "<td style='border-top:#fff;'>" + "<img style='width: 50px;' src= './assets/img/spc-product-5.png'></img>"+ "</td>" 
+      + "<td style='border-top:#fff;'>" + cartArray[i].name + "</td>" 
+      + "<td style='border-top:#fff;'>(" + cartArray[i].price + ")</td>"
+      //+ "<td class=' '>"
+      //
+      + "<td class='col-lg-4 col-sm-12' style='border-top:#fff;'><div class='input-group'><button class='minus-item input-group-addon btn btn-secondary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class='col-10 item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
       //+ "<td>"
-      //+ "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-      //+ "</td>"
-      + "<td><button class='col-12 delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + "<button class='plus-item btn btn-secondary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
+      + "</td>"
       + " = " 
-      + "<td class=' '>" + cartArray[i].total + "</td>" 
+      + "<td style='border-top:#fff;' class='col-lg-3 col-sm-12 mb-2 cart-total'>" + cartArray[i].total + "</td>" 
+      + "<td style='border-top:#fff;'><button class='col-sm-12 delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      
       +  "</tr>";
   }
   $('.show-cart').html(output);
