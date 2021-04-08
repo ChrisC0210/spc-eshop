@@ -161,20 +161,20 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
-    output += "<tr id='cartt' class='row d-flex justify-content-center has-cart' style='overflow-x:scroll;'>"
+    output += "<tr id='cartt' class='mb-4 row has-cart' style='overflow-x:scroll;'>"
       + "<td style='border-top:#fff;'>" + "<img style='width: 50px;' src= './assets/img/spc-product-5.png'></img>"+ "</td>" 
-      + "<td style='border-top:#fff;'>" + cartArray[i].name + "</td>" 
-      + "<td style='border-top:#fff;'>(" + cartArray[i].price + ")</td>"
+      + "<td style='border-top:#fff;' class='text-truncate'>" + cartArray[i].name + "</td>" 
+      //+ "<td style='border-top:#fff;'>(" + cartArray[i].price + ")</td>"
       //+ "<td class=' '>"
       //
-      + "<td class='col-lg-4 col-sm-12' style='border-top:#fff;'><div class='input-group'><button class='minus-item input-group-addon btn btn-secondary' data-name=" + cartArray[i].name + ">-</button>"
-      + "<input type='number' class='col-10 item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<td class='col-lg-6 col-md-4 col-sm-12' style='border-top:#fff;'><div class='input-group'><button class='minus-item input-group-addon btn btn-secondary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class=' item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
       //+ "<td>"
       + "<button class='plus-item btn btn-secondary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
       + "</td>"
       + " = " 
-      + "<td style='border-top:#fff;' class='col-lg-3 col-sm-12 mb-2 cart-total'>" + cartArray[i].total + "</td>" 
-      + "<td style='border-top:#fff;'><button class='col-sm-12 delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + "<td style='border-top:#fff;' class='mb-2 cart-total'>" + cartArray[i].total + "</td>" 
+      + "<td style='border-top:#fff;'><button class='col-sm-12 delete-item btn btn-danger' data-name=" + cartArray[i].name + ">Remove</button></td>"
       
       +  "</tr>";
   }

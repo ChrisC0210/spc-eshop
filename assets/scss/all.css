@@ -13401,9 +13401,14 @@ video::-webkit-media-controls {
 
 @media screen and (max-width: 500px) {
   .delete-item {
+    bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cart-total {
     position: absolute;
     right: 0px;
-    bottom: 0px;
   }
 }
 

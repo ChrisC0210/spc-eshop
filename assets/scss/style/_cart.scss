@@ -12,14 +12,15 @@
 }
 .delete-item {
 	@media screen and (max-width: 500px) {
-		position: absolute;
-		right: 0px;
+		//position: absolute;
+		//right: 0px;
 		bottom: 0px;
 	}
 
 }
 .cart-total{
 	@media screen and (max-width: 500px) {
-
+		position: absolute;
+		right: 0px;
 	}
 }
