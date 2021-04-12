@@ -162,12 +162,14 @@ function displayCart() {
   var output = "";
   for(var i in cartArray) {
     output += "<tr id='cartt' class='mb-4 row has-cart' style='overflow-x:scroll;'>"
-      + "<td style='border-top:#fff;'>" + "<img style='width: 50px;' src= './assets/img/spc-product-5.png'></img>"+ "</td>" 
-      + "<td style='border-top:#fff;' class='text-truncate'>" + cartArray[i].name + "</td>" 
+      + "<td style='border-top:#fff;'>" 
+      + "<img style='width: 50px;' src= './assets/img/spc-product-5.png'></img>"+ 
+      "</td>" 
+      + "<td style='border-top:#fff;' class='col-4 text-truncate'>" + cartArray[i].name + "</td>" 
       //+ "<td style='border-top:#fff;'>(" + cartArray[i].price + ")</td>"
       //+ "<td class=' '>"
       //
-      + "<td class='col-lg-6 col-md-4 col-sm-12' style='border-top:#fff;'><div class='input-group'><button class='minus-item input-group-addon btn btn-secondary' data-name=" + cartArray[i].name + ">-</button>"
+      + "<td class='col-lg-3 col-md-4 col-sm-12' style='border-top:#fff;'><div class='input-group'><button class='minus-item input-group-addon btn btn-secondary' data-name=" + cartArray[i].name + ">-</button>"
       + "<input type='number' class=' item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
       //+ "<td>"
       + "<button class='plus-item btn btn-secondary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"

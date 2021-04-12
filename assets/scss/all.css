@@ -12496,7 +12496,6 @@ address, caption, cite, code, dfn, em, var {
 
 .card-bg:hover::after, .card-bg :active::after {
   content: "";
-  background-color: #274778;
   height: 318px;
   width: 520px;
   position: absolute;
@@ -12505,7 +12504,16 @@ address, caption, cite, code, dfn, em, var {
   z-index: -1;
   box-shadow: 0px 3px 6px #00000029;
   -webkit-box-shadow: 0px 3px 6px #00000029;
-  background-color: #0087ab;
+  background-color: #274778;
+}
+
+@media screen and (max-width: 1300px) {
+  .card-bg:hover::after, .card-bg :active::after {
+    bottom: 0px;
+    left: 0px;
+    height: 0%;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1290px) {
@@ -12527,7 +12535,7 @@ address, caption, cite, code, dfn, em, var {
 
 .card-bg::after {
   content: "";
-  background-color: #274778;
+  background-color: #3A6AB5;
   height: 318px;
   width: 520px;
   position: absolute;
@@ -12666,7 +12674,7 @@ address, caption, cite, code, dfn, em, var {
 
 .owl-prev span {
   font-size: 40px;
-  padding: 0 20px 0 20px !important;
+  padding: 10px 20px 10px 20px !important;
   border-radius: 10px !important;
   color: #fefefe;
   background-color: #274778;
@@ -12675,8 +12683,9 @@ address, caption, cite, code, dfn, em, var {
 }
 
 .owl-prev span:hover, .owl-prev span :active {
-  border: solid 0px rgba(255, 255, 255, 0);
+  border: solid 2px #274778;
   border-radius: 10px !important;
+  background-color: #274778;
 }
 
 .owl-next {
@@ -12697,7 +12706,7 @@ address, caption, cite, code, dfn, em, var {
 
 .owl-next span {
   font-size: 40px;
-  padding: 0 20px 0 20px !important;
+  padding: 10px 20px 10px 20px !important;
   border-radius: 10px !important;
   color: #fefefe;
   background-color: #274778;
@@ -12706,7 +12715,7 @@ address, caption, cite, code, dfn, em, var {
 }
 
 .owl-next span:hover, .owl-next span :active {
-  border: solid 0px rgba(255, 255, 255, 0);
+  border: solid 2px #274778;
   border-radius: 10px !important;
 }
 
@@ -13405,10 +13414,21 @@ video::-webkit-media-controls {
   }
 }
 
+.cart-total {
+  position: absolute;
+  right: 0px;
+}
+
 @media screen and (max-width: 500px) {
   .cart-total {
     position: absolute;
     right: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .qty-text {
+    color: #fff;
   }
 }
 

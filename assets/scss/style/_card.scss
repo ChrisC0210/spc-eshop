@@ -2,19 +2,22 @@
 	margin-bottom: 40px;
 	transition: all .3s ease-out;
 
+	//hover
 	&:hover,:active {
 		.img-fluid{
 			box-shadow: 0px 3px 6px #00000029;
 			-webkit-box-shadow: 0px 3px 6px #00000029;
 			//transform: scale(0.95, 0.95);
 			//object-fit: contain;
+			//background-color: $spc-blue;
 		}
+
 		&::after{
 			//bottom: 0px;
 			//left: 0px;
 			//transform: translate(0px, 0%);
 			content: "";
-			background-color: $spc-blue;
+			//background-color: $spc-blue;
 			height: 318px;
 			width: 520px;
 			position: absolute;
@@ -23,8 +26,14 @@
 			z-index: -1;
 			box-shadow: 0px 3px 6px #00000029;
 			-webkit-box-shadow: 0px 3px 6px #00000029;
-			background-color: #0087ab;
-
+			//background-color: #0087ab;
+			background-color: $spc-blue;
+			@media screen and (max-width: 1300px) {
+				bottom: 0px;
+				left: 0px;
+				height: 0%;
+				width: 100%;
+			}
 		}
 	}
 	@media screen and (max-width: 1290px) {
@@ -40,9 +49,10 @@
 			-webkit-box-shadow: 0px 3px 6px #00000029;
 		}
 	}
+	//after
 	&::after{
 		content: "";
-		background-color: $spc-blue;
+		background-color: $spc-blue-400;
 		height: 318px;
 		width: 520px;
 		position: absolute;
@@ -165,7 +175,7 @@
 	}
 	span{
 		font-size: 40px;
-		padding: 0 20px 0 20px !important;
+		padding: 10px 20px 10px 20px !important;
 		border-radius: 10px !important;
 		color: $white;
 		background-color: $spc-blue;
@@ -173,8 +183,9 @@
 		-webkit-box-shadow: 0px 2px 2px #00000029;
 		&:hover,:active{
 		//border: solid 1px rgb(255, 255, 255);
-		border: solid 0px rgba(255, 255, 255, 0);
+		border: solid 2px #274778;
 		border-radius: 10px !important;
+		background-color: $spc-blue;
 
 		}
 	}
@@ -195,14 +206,16 @@
 
 	span{
 		font-size: 40px;
-		padding: 0 20px 0 20px !important;
+		padding: 10px 20px 10px 20px !important;
 		border-radius: 10px !important;
 		color: $white;
 		background-color: $spc-blue;
 		box-shadow: 0px 2px 2px #00000029;
 		-webkit-box-shadow: 0px 2px 2px #00000029;
 		&:hover,:active{
-		border: solid 0px rgba(255, 255, 255, 0);
+		//border: solid 0px rgba(255, 255, 255, 0);
+		border: solid 2px #274778;
+
 		border-radius: 10px !important;
 		}
 	}

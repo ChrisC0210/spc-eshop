@@ -19,8 +19,16 @@
 
 }
 .cart-total{
+	position: absolute;
+	right: 0px;
 	@media screen and (max-width: 500px) {
 		position: absolute;
 		right: 0px;
+	}
+}
+//
+.qty-text{
+	@media screen and (max-width: 500px) {
+		color: #fff;
 	}
 }
