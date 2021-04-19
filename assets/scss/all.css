@@ -12599,6 +12599,17 @@ address, caption, cite, code, dfn, em, var {
   -webkit-box-shadow: 0px 1px 1px #00000029;
 }
 
+.owl-carousel-card .card-img-top::after {
+  content: " View ";
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .owl-carousel-card .card-img-top:hover, .owl-carousel-card .card-img-top :active {
   background-color: #adb5bd;
   opacity: 0.5;
@@ -12606,7 +12617,7 @@ address, caption, cite, code, dfn, em, var {
      object-fit: scale-down;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .owl-carousel-card .card-img-top:hover, .owl-carousel-card .card-img-top :active {
     -o-object-fit: fill;
        object-fit: fill;
@@ -12621,6 +12632,10 @@ address, caption, cite, code, dfn, em, var {
 
 .owl-carousel-card a:hover::after, .owl-carousel-card a :active::after {
   content: " View ";
+  background-color: #adb5bd;
+  opacity: 0.8;
+  padding: 10px 20px;
+  border-radius: 4px;
   font-size: 20px;
   font-weight: 500;
   position: absolute;

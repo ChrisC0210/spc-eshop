@@ -110,11 +110,20 @@
 }
 .owl-carousel-card{
 	.card-img-top{
+		&::after{
+			content: " View ";
+			font-size: 20px;
+			font-weight: 500;
+			position: absolute;
+			top:40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 		&:hover,:active{
 			background-color: $gray-500;
 			opacity: 0.5;
 			object-fit: scale-down;
-			@media screen and (max-width: 800px) {
+			@media screen and (max-width: 900px) {
 				object-fit: fill;
 			}
 		}
@@ -126,6 +135,11 @@
 			width: 100%;
 			&::after{
 				content: " View ";
+				background-color: $gray-500;
+				opacity: 0.8;
+				//padding: 20px 60px;
+				padding: 10px 20px;
+				border-radius: 4px;
 				font-size: 20px;
 				font-weight: 500;
 				position: absolute;
