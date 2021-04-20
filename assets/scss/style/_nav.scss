@@ -69,7 +69,8 @@
 
 }
 .spc-nav{
-	width: 100%;
+	//width: 100%;
+	width: 174px;
 	height: 80px;
 	background: rgb(0,0,0);
 	background: linear-gradient(180deg, rgba(0, 0, 0, 0.637) 0%, rgba(255,255,255,0.8) 100%);
@@ -98,10 +99,17 @@
 	}
 }
 .spc-logo{
-	width: 174px;
+	//width: 174px;
+	width: 100%;
+	height:auto;
 	flex: 1;
 	padding:0px 0px 0 0;
 	//margin:-14px 0px 0 0;
+	//.panzoom
+	backface-visibility: initial !important;
+	-webkit-backface-visibility: initial !important;
+	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
 }
 //link button
 .side-categories{

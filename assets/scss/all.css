@@ -12610,13 +12610,6 @@ address, caption, cite, code, dfn, em, var {
           transform: translate(-50%, -50%);
 }
 
-.owl-carousel-card .card-img-top:hover, .owl-carousel-card .card-img-top :active {
-  background-color: #adb5bd;
-  opacity: 0.5;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
-}
-
 @media screen and (max-width: 900px) {
   .owl-carousel-card .card-img-top:hover, .owl-carousel-card .card-img-top :active {
     -o-object-fit: fill;
@@ -12632,9 +12625,9 @@ address, caption, cite, code, dfn, em, var {
 
 .owl-carousel-card a:hover::after, .owl-carousel-card a :active::after {
   content: " View ";
-  background-color: #adb5bd;
-  opacity: 0.8;
-  padding: 10px 20px;
+  background-color: #F5F5F5;
+  opacity: 0.6;
+  padding: 120px 100px;
   border-radius: 4px;
   font-size: 20px;
   font-weight: 500;
@@ -12645,15 +12638,40 @@ address, caption, cite, code, dfn, em, var {
           transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 1300px) {
+  .owl-carousel-card a:hover::after, .owl-carousel-card a :active::after {
+    padding: 100px 85px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .owl-carousel-card a:hover::after, .owl-carousel-card a :active::after {
+    padding: 140px 60px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .owl-carousel-card a:hover::after, .owl-carousel-card a :active::after {
+    padding: 100%;
+    opacity: 0.4;
+  }
+}
+
 .owl-carousel-collect .card-img-top {
   opacity: 0.5;
 }
 
 .owl-carousel-collect .card-img-top:hover, .owl-carousel-collect .card-img-top :active, .owl-carousel-collect .card-img-top :focus {
-  background-color: #adb5bd;
-  opacity: 0.5;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  background-color: #414141;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 900px) {
+  .owl-carousel-collect .card-img-top:hover, .owl-carousel-collect .card-img-top :active, .owl-carousel-collect .card-img-top :focus {
+    -o-object-fit: fill;
+       object-fit: fill;
+    background-color: #414141;
+  }
 }
 
 .owl-carousel-collect p {
@@ -12668,7 +12686,6 @@ address, caption, cite, code, dfn, em, var {
 .owl-carousel-collect a:hover, .owl-carousel-collect a :active {
   text-decoration: none;
   color: #274778;
-  width: 100%;
 }
 
 .owl-prev {
@@ -13265,14 +13282,23 @@ video::-webkit-media-controls {
   -webkit-box-shadow: 0px 4px 6px #00000029;
   height: 80px;
   padding: 10px 0 4px 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .spc-logo {
+  width: 100%;
+  width: 200px;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  backface-visibility: initial !important;
+  -webkit-backface-visibility: initial !important;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
 }
 
 .nav-right {
@@ -13417,7 +13443,7 @@ video::-webkit-media-controls {
   top: 10px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
   .icon-basket {
     right: 12px;
   }

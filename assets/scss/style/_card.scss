@@ -120,9 +120,9 @@
 			transform: translate(-50%, -50%);
 		}
 		&:hover,:active{
-			background-color: $gray-500;
-			opacity: 0.5;
-			object-fit: scale-down;
+			//background-color: $gray-500;
+			//opacity: 0.5;
+			//object-fit: scale-down;
 			@media screen and (max-width: 900px) {
 				object-fit: fill;
 			}
@@ -135,10 +135,12 @@
 			width: 100%;
 			&::after{
 				content: " View ";
-				background-color: $gray-500;
-				opacity: 0.8;
+				background-color: $gray-200;
+				//opacity: 0.8;
+				opacity: 0.6;
 				//padding: 20px 60px;
-				padding: 10px 20px;
+				//padding: 10px 20px;
+				padding: 120px 100px;
 				border-radius: 4px;
 				font-size: 20px;
 				font-weight: 500;
@@ -146,17 +148,33 @@
 				top:40%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+				@media screen and (max-width: 1300px) {
+					padding: 100px 85px;
+				}
+				@media screen and (max-width: 900px) {
+					padding: 140px 60px;
+				}
+				@media screen and (max-width: 800px) {
+					padding: 100%;
+					opacity: 0.4;
+					//padding: 20px 60px;
+				}
 			}
 		}
 	}
 }
 .owl-carousel-collect{
+	//margin-top: 50px !important;
 	.card-img-top{
 		opacity: 0.5;
 		&:hover,:active, :focus{
-			background-color: $gray-500;
-			opacity: 0.5;
-			object-fit: scale-down;
+			background-color: $gray-800;
+			opacity: 0.8;
+			//object-fit: scale-down;
+			@media screen and (max-width: 900px) {
+				object-fit: fill;
+				background-color: $gray-800;
+			}
 		}
 	}
 	p{
@@ -170,7 +188,7 @@
 		&:hover,:active{
 			text-decoration: none;
 			color: $spc-blue;
-			width: 100%;
+			//width: 100%;
 	}
 }
 }
