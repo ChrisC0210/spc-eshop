@@ -12627,7 +12627,7 @@ address, caption, cite, code, dfn, em, var {
   content: " View ";
   background-color: #F5F5F5;
   opacity: 0.6;
-  padding: 120px 100px;
+  padding: 110px 100px;
   border-radius: 4px;
   font-size: 20px;
   font-weight: 500;
@@ -13331,7 +13331,7 @@ video::-webkit-media-controls {
 }
 
 .nav-left {
-  padding-top: 10px;
+  padding-top: 20px;
   display: block;
 }
 
