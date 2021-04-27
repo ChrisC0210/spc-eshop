@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>St. Paul’s College Foundation Limited – eShop</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/icon/spc.ico">
+	<link rel="stylesheet" href="./dist/css/all.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./dist/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="./dist/css/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<style>
+	.swiper-slide {
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	.swiper-container {
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+<body>
+	<div class="text-center pt-2 header-promotion white text-h-1-4-1">Free Shipping Now!</div>
+	<div class="sticky-top spc-nav-all">
+		<a href="/">
+			<img class="spc-logo" src="./assets/icon/spc-eshop-logo.png" alt="spc-logo">
+		</a>
+		<nav class=" text-h-1-4-1 gray-800">
+			<div id="nav-icon3">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="nav-left">
+				<ul class="d-flex ">
+					<li class="nav-item ">
+						<a class="nav-link" href="./new-items.html">New Items</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="pre-orders.html">Pre-orders</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="limited-edition.html">Limited Edition</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="promotion.html">Promotion</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Categories</a>
+						<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown03">
+							<a class="dropdown-item" href="./product.html">Apparel</a>
+							<a class="dropdown-item" href="#">Accessories</a>
+							<a class="dropdown-item" href="#">Glassware</a>
+							<a class="dropdown-item" href="#">Education</a>
+							<a class="dropdown-item" href="#">Electronics</a>
+							<a class="dropdown-item" href="#">Miscellaneous</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-right d-flex">
+				<li class="nav-item dropdown" style="margin-top: -14px;">
+					<a class=" nav-link dropdown-toggle mb-4" href="#" id="dropdown0" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
+							<g id="Group_1072" data-name="Group 1072" transform="translate(-197 -210)">
+								<path id="Path_873" data-name="Path 873" d="M0,0H50V50H0Z" transform="translate(197 210)" fill="#fff" />
+								<g id="Group_1071" data-name="Group 1071" transform="translate(-14.182 -4.5)">
+									<ellipse id="Ellipse_98" data-name="Ellipse 98" cx="11.234" cy="11" rx="11.234" ry="11"
+										transform="translate(224.682 222.5)" fill="none" stroke="#707070" stroke-width="1" />
+									<path id="Path_870" data-name="Path 870"
+										d="M6894.073,3102.459s3.363-9.085,15.189-9.085,16.264,9.085,16.264,9.085"
+										transform="translate(-6673.392 -2846.459)" fill="none" stroke="#707070" stroke-width="1" />
+								</g>
+							</g>
+						</svg>
+						<span class="text-none">Login / Register </span></a>
+					<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown04">
+						<a class="dropdown-item" href="./login.html">Login / Register</a>
+						<a class="dropdown-item" href="./userInfo.html">User Info</a>
+						<a class="dropdown-item" href="./order-history.html">Order History</a>
+					</div>
+				</li>
+				<!-- <a class="mr-4" href="./login.html">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
+						<g id="Group_1072" data-name="Group 1072" transform="translate(-197 -210)">
+							<path id="Path_873" data-name="Path 873" d="M0,0H50V50H0Z" transform="translate(197 210)" fill="#fff" />
+							<g id="Group_1071" data-name="Group 1071" transform="translate(-14.182 -4.5)">
+								<ellipse id="Ellipse_98" data-name="Ellipse 98" cx="11.234" cy="11" rx="11.234" ry="11"
+									transform="translate(224.682 222.5)" fill="none" stroke="#707070" stroke-width="1" />
+								<path id="Path_870" data-name="Path 870"
+									d="M6894.073,3102.459s3.363-9.085,15.189-9.085,16.264,9.085,16.264,9.085"
+									transform="translate(-6673.392 -2846.459)" fill="none" stroke="#707070" stroke-width="1" />
+							</g>
+						</g>
+					</svg>
+					<span class="text-none dropdown">Login / Register</span>
+				</a> -->
+				<a type="button" data-toggle="modal" data-target="#cart">
+					<span class="spc-blue total-count icon-basket">0</span>
+					<svg id="icon-basket" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
+						<rect id="Rectangle_434" data-name="Rectangle 434" width="50" height="50" fill="none" />
+						<g id="Group_1001" data-name="Group 1001" transform="translate(-6882.778 -3087.228)">
+							<path id="Path_804" data-name="Path 804" d="M6895.929,3096.4h24.382l4.486,23.751h-34.035Z"
+								transform="translate(-0.001 6.984)" fill="none" stroke="#707070" stroke-width="1" />
+							<path id="Path_805" data-name="Path 805"
+								d="M6894.073,3103.771s1.877-10.4,8.476-10.4,9.074,10.4,9.074,10.4" transform="translate(4.931 3.949)"
+								fill="none" stroke="#707070" stroke-width="1" />
+						</g>
+					</svg>
+	
+					<span class="text-none">Basket</span>
+				</a>
+			</div>
+		</nav>
+	</div>
+	<!-- cart -->
+	<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				
+				<h5 class="modal-title" id="exampleModalLabel">Basket</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<table class="show-cart table">
+					
+				</table>
+				<div>Total price: $<span class="total-cart"></span></div>
+			</div>
+			<div class="modal-footer">
+				<button class="clear-cart btn btn-secondary">Clear Cart</button>
+				<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+				<a href="./basket.html" type="button" class="btn btn-primary">View Basket</a>
+			</div>
+		</div>
+	</div>
+	</div> 
+	<!-- cart -->
+
+	<!-- product -->
+  <!-- content start -->
+	<div class="container text-h-1-4-1">
+		<!-- <nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">User Info</li>
+			</ol>
+		</nav> -->
+		<div class="mt-4 mb-4 text-h-1-4-1">
+			<h4 class="col-sm-12 mt-4 mb-4 text-m-6-7-6 spc-blue d-flex justify-content-center">Create New Password</h4>
+		</div>
+	</div>
+  <!-- content end -->
+			<!-- ABOUT  -->
+			<!-- <div class="row mt-4 text-h-1-4-1 d-flex justify-content-center">
+				<h4 class="text-center col-12 text-m-5-7-5 spc-blue">User Info</h4>
+			</div> -->
+			<div class="container"> 
+				<div class="row d-flex justify-content-center" >
+					<div class="col-lg-10">
+						<form name="form_checkout" action="/" method="post"
+						class="needs-validation form-border gray-600 text-h-1-4-1">
+							<div class="form-group">
+								<label for="member_password">Password *</label>
+								<input name="member_password" type="password" id="member_password" class="form-control"
+								pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" 
+								required>
+							</div>
+							<div class="form-group">
+								<label for="member_password">Confirm Password *</label>
+								<input name="member_password"  type="password" id="member_password_confirm" class="form-control"
+								pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+								required>
+							</div>
+							<div><span id="message"></span></div>
+							<div class="mt-4 d-flex justify-content-center">
+								<button class="btn btn-primary" id="btnSubmit" type="submit" value="Submit">Submit</button>
+							</div>
+						</form>
+					</div>
+	
+				</div>
+
+			</div>
+
+
+		<!-- ABOUT  -->
+	<!-- product -->
+	<!-- <hr> -->
+
+
+
+
+	<!-- footer -->
+	<footer class="mt-4 mb-4 pt-4 border-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md mb-4 text-h-1-4-1">
+					<h5 class="text-h-2-5-2">Product</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="#">Apparel</a></li>
+						<li><a class="text-muted" href="#">Accessories</a></li>
+						<li><a class="text-muted" href="#">Glassware</a></li>
+						<li><a class="text-muted" href="#">Electronics</a></li>
+						<li><a class="text-muted" href="#">Gift vouchers</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md mb-4 text-h-1-4-1">
+					<h5 class="text-h-2-5-2">FAQ</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="#">Help</a></li>
+						<li><a class="text-muted" href="#">Track Order</a></li>
+						<li><a class="text-muted" href="#">Delivery & Returns</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md mb-4 text-h-1-4-1">
+					<h5 class="text-h-2-5-2">More From SPC</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="#">Facebook</a></li>
+						<li><a class="text-muted" href="#">instagram</a></li>
+					</ul>
+				</div>
+				<div class="col-6 col-md mb-4 text-h-1-4-1">
+					<h5 class="text-h-2-5-2">Contact</h5>
+					<ul class="list-unstyled text-small">
+						<li><a class="text-muted" href="#">69 Bonham Road, Hong Kong.</a></li>
+						<li><a class="text-muted" href="#">Tel: (852) 2546 2241</a></li>
+						<li><a class="text-muted" href="#">Email: mail@spc.edu.hk</a></li>
+						<li><a class="text-muted" href="#">Terms</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<div class="text-center pt-2 footer-end white text-h-1-4-1 pt-4">Copyright © 2021 St. Paul’s College. All rights
+		reserved.</div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+	<script type="text/javascript" src="./dist/js/popper.min.js"></script>
+	<script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+	<script src="./dist/js/swiper-bundle.min.js"></script>
+	<script src="./dist/js/aos.js"></script>
+	<script src="./dist/js/owl.carousel.min.js"></script>
+	<!-- //shopping-cart -->
+	<script src="./dist/js/shopping-cart.js"></script>
+	<script>
+		$(document).ready(function () {
+			//nav
+			//$(".nav-left").hide();
+			$('#nav-icon3').click(function () {
+				$(this).toggleClass('open');
+				if ($(this).hasClass('open')) {
+					$(".nav-left").show();
+					$(".nav-left").css("display", "block");
+
+				} else {
+					$(".nav-left").hide();
+					$(".nav-left").css("display", "none");
+
+				}
+
+			});
+
+			var swiper = new Swiper('.swiper-container', {
+				zoom: true,
+				effect: 'fade',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+			});
+			//owl
+			$('.owl-carousel-1').owlCarousel({
+				nav: true,
+				dots: false,
+				margin: 20,
+				items: 4,
+				responsive: {
+					780: {
+						items: 4,
+					},
+					480: {
+						items: 1,
+					},
+				}
+			});
+			$('.owl-carousel-2').owlCarousel({
+				nav: true,
+				dots: false,
+				margin: 20,
+				items: 1,
+				center: true,
+				loop: true,
+				URLhashListener: true,
+				startPosition: 'URLHash',
+				responsive: {
+					780: {
+						items: 1,
+					},
+					480: {
+						items: 1,
+					},
+				}
+			});
+
+		});
+	</script>
+	<script>
+		(function () {
+			//
+			$('#member_password, #member_password_confirm').on('keyup', function () {
+				if ($('#member_password').val() == $('#member_password_confirm').val()) {
+					$('#message').html('Password matching!').css('color', 'green');
+				} else 
+				$('#message').html('Please enter same password!').css('color', '#96172E');
+			});
+			//
+		}());
+	</script>
+</body>
+
+</html>
