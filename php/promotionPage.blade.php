@@ -1,6 +1,14 @@
 @extends('frontend.layouts.app', ['title' => 'SPC eshop'])
 
 @section('content')
+<style>
+  @media screen and (max-width: 500px) {
+    .owl-carousel-card .card{
+    width: 160px;
+  }
+  }
+</style>
+
   <!-- content start -->
   <div class="container text-h-1-4-1">
     <nav class=" " aria-label="breadcrumb">
@@ -24,9 +32,9 @@
 	<!-- <div class="mt-4 mb-4 text-h-1-4-1">
 		<h4 class=" mt-4 mb-4 text-m-6-7-6 spc-blue">New Items</h4>
 	</div> -->
-	<div class="row container owl-carousel-card">
+	<div class="row">
     @foreach($promotion_products as $product)
-      <a class="mb-4 mt-4 col-lg-3 col-sm-12" href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">
+      <a class="owl-carousel-card mb-4 mt-4 col col-lg-3 col-sm-6" href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">
         <div class="card">
           <span class="badge badge-danger" style="position: absolute; left:4px;top:4px;z-index: 999;">SALE</span>
           <img src="<?= asset('assets/img/spc-product-'.$product->product_id.'.png')?>" class="card-img-top" alt="p1">
