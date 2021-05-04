@@ -200,7 +200,7 @@
                           shipping costs unless the error was made at our end and the items sent to you were incorrect
                           or defective.
                         </div>
-                        <div class="mb-1">Please contact us at product@aussiepremier.com and one of our Product
+                        <div class="mb-1">Please contact us at eshop@spc-foundation.org.hk and one of our Product
                           Representatives will
                           contact you and guide you through the return process.</div>
                       </section>
@@ -216,7 +216,7 @@
                           Please note that
                           all shipping cost of the replacement item will be borne by the purchaser. All purchased items
                           can only be
-                          exchanged once. Please contact us at product@aussiepremier.com for arrangement.</div>
+                          exchanged once. Please contact us at eshop@spc-foundation.org.hk for arrangement.</div>
                       </section>
                     </div>
                   </div>
