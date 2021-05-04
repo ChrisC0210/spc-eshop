@@ -1,7 +1,35 @@
 @extends('frontend.layouts.app', ['title' => 'Aussie Premier'])
 
 @section('content')
-
+<style>
+  .form-control{
+    -webkit-appearance: none;
+  }
+.table{
+  border-collapse: collapse;
+  }
+.table th, td{
+  /* padding: 2px 0 0 2px 0; */
+  text-align: end;
+}
+@media screen and (max-width: 500px) {
+  .table tr{
+    border: 1px solid #D6D6D6;
+  }
+  .table th{
+    display:  none;
+  }
+  .table td{
+    display: block;
+    border: none;
+  }
+  .table td:before{
+    content: attr(data-th) " ";
+    float: left;
+    font-weight: bold;
+  }
+}
+</style>
 <!-- product -->
 <div class="container">
   <div class="mt-4 text-h-1-4-1 d-flex justify-content-center gray-600">
@@ -77,16 +105,16 @@
                       {!! csrf_field() !!}
                       {!! method_field('POST') !!}
                       <tr>
-                        <th scope="row">
+                        <th data-th=" " scope="row">
                           <img style="width: 50px;" src="<?= asset('assets/img/spc-product-'.$item['product_id'].'.png')?>">
                         </th>
                         @if($item['options'])
-                          <td>{{ $item['name']." - ".$item['options'] }}</td>
+                          <td data-th="Product">{{ $item['name']." - ".$item['options'] }}</td>
                         @else
-                          <td>{{ $item['name'] }}</td>
+                          <td data-th="Product">{{ $item['name'] }}</td>
                         @endif
-                        <td><input type="number" name="qty" value="<?=$item['qty']?>" min="1" max="5" style="width:45px;"></td>
-                        <td><?= moneyFormat($item['price'])?></td>
+                        <td data-th="Quantity"><input type="number" name="qty" value="<?=$item['qty']?>" min="1" max="5" style="width:45px;"></td>
+                        <td data-th="Unit Price"><?= moneyFormat($item['price'])?></td>
                         <td>
                           <a class="remove-product btn btn-light" href="{!! $item['remove_url'] !!}">
                             Remove
@@ -95,12 +123,12 @@
                             Update
                           </a>
                         </td>
-                        <td><?= moneyFormat($item['total'])?></td>
+                        <td data-th="Sub total"><?= moneyFormat($item['total'])?></td>
                       </tr>
                     </form>
                   @endforeach      
                 </tbody>
-                <tfoot>
+                <!-- <tfoot>
                   <tr>
                     <td>Shipping</td>
                     <td></td>
@@ -117,8 +145,16 @@
                     <td></td>
                     <td>{{ moneyFormat($subTotal) }}</td>
                   </tr>
-                </tfoot>
+                </tfoot> -->
               </table>
+              <div class="d-flex justify-content-between">
+                    <div>Shipping</div>
+                    <div>$0.00</div>
+                  </div>
+                  <div class="text-bold d-flex justify-content-between">
+                    <div>Grand Total</div>
+                    <div>{{ moneyFormat($subTotal) }}</div>
+                  </div>
               {{-- <div>
                 <p>Shipping $0.00</p>
                 <p>Grand TTL: {{ moneyFormat($subTotal) }}</p>

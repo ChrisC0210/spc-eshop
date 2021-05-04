@@ -5,7 +5,12 @@
   . {
       text-align: center;
   }
-
+	.btn-primary{
+		-webkit-appearance: none;
+	}
+  .form-control{
+		-webkit-appearance: none;
+  }
   .swiper-slide {
 		background-position: center;
 		background-size: cover;
@@ -17,6 +22,13 @@
 		width: 100%;
 		height: 100%;
 	}
+  .owl-carousel .owl-item img {
+    width: 200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
 </style>
 
   <div class="container text-h-1-4-1">
@@ -32,7 +44,7 @@
   </div>
   <!-- product -->
 	<div class="container">
-		<div class="col-12 row d-flex justify-content-between">
+		<div class="row d-flex justify-content-center">
 			<div class="col-lg-6 col-md-12">
         <div class=" ">
           <img src="#" alt="">
@@ -72,7 +84,7 @@
             @if($product->product_attribute)
               <input type="text" name="product_attribute" value="{{ $product->product_attribute }}" hidden>
 
-              <div class="d-flex col-12 form-group">
+              <div class="d-flex form-group">
                 <label class="mt-2" for="product_opt">{{ $product->product_attribute }} : &nbsp;</label>
                 <select name="product_opt" id="product_opt" class="col-4 mr-4 form-control">
                   @foreach($productOpts as $productOpt)
@@ -83,7 +95,7 @@
             @endif
             {{-- attr --}}
             {{-- qty --}}
-            <div class="d-flex col-12 form-group">
+            <div class="d-flex form-group">
               <label class="mt-2" for="qty">Select Quantity: &nbsp;</label>
               <select name="qty" id="qty" class="col-4 mr-4 form-control">
                 <option value="1">1</option>
