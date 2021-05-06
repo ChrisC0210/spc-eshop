@@ -6,8 +6,14 @@
     .product-box-img img{
     width: 120px;
   }
+  .owl-carousel-card a:hover::after,.owl-carousel-card a :active::after
+  {padding:82px 60px 82px 60px;
+    opacity:0.4}
   }
-
+  .card{
+    border: solid 1px #f5f5f5;
+    border-radius: 4px;
+  }
 </style>
   <!-- content start -->
   
@@ -25,16 +31,19 @@
     </div>
     <!-- breadcrumb end -->
     <!-- product start -->
-    <div class="d-flex justify-content-center">
-      <div class="row col-12 mb-4 text-r-1-3-1 product-all-box">
+    <div class="container">
+      <div class="row mb-4 text-r-1-3-1 product-all-box">
           <? foreach($productCat->Product()->orderBy('product.label_eng')->get() as $product){?>
           <!-- card start -->
-        <div class="col col-lg-3 col-md-6 col-sm-6 d-flex justify-content-center product-all ">
-          <div class="product-box-img">
+        <div class="col-6 col-lg-3 col-md-6 col-sm-6  owl-carousel-card mb-4">
+          <div class="card p-2"> 
+          <div class=" ">
               <a href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">
-                  {{-- <img class="mb-4" src="{!! asset($product->image_1) !!}" alt=""> --}}
-                  <img class="mb-4" src="<?= asset('assets/img/spc-product-'.$product->product_id.'.png')?>" alt="">
+                  {{-- <img class="mb-4 card-img-top" src="{!! asset($product->image_1) !!}" alt=""> --}}
+                  <img class="mb-4 card-img-top" src="{{ asset($product->image_1) }}" alt="">
               </a>
+            </div>
+
             <div>
               <a href="{!!  route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">{{ $product->label_eng }}</a>
               <? if((new \App\Http\Controllers\CartItemController)->hasDiscount()){?>
@@ -53,7 +62,6 @@
     {{-- content center --}}
   </div>
   {{-- container end --}}
-
 {{-- *********************** --}}
 
 @endsection

@@ -4,9 +4,14 @@
 <style>
   @media screen and (max-width: 500px) {
     .owl-carousel-card .card{
-    width: 160px;
+    width: 170px;
   }
   }
+  .owl-carousel-card a:hover::after,.owl-carousel-card a :active::after
+  {padding:82px 60px 82px 60px;
+    opacity:0.4}
+  }
+
 </style>
   <!-- content start -->
   <div class="container text-h-1-4-1">
@@ -34,7 +39,7 @@
 	<div class=" row">
     @foreach($new_item_products as $product)
       <a class="owl-carousel-card mb-4 mt-4 col col-lg-3 col-sm-6" href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">
-        <div class="card">
+        <div class="card" style="border-radius: 4px;border: solid 1px #f5f5f5;">
           <span class="badge badge-info" style="position: absolute; left:4px;top:4px;z-index: 999;">New</span>
           <img src="<?= asset('assets/img/spc-product-'.$product->product_id.'.png')?>" class="card-img-top" alt="p1">
           <div class="card-body text-h-1-4-1">
