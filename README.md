@@ -62,4 +62,26 @@ fixed nav rwd
 >>> login.blade.php
 change text:Privacy Policy popup
 eshop@spc-foundation.org.hk
->>>
+
+
+
+>>> 2021/05/06
+>>>/client/www.spc-foundation.org.hk/resources/views/frontend/shopping
+>>> collectionPage.blade.php
+
+>>>index_test.blade.php
+
+>>>find assets path
+>>>https://stackoverflow.com/questions/32705709/laravel-5-assets-links
+>>>/client/www.spc-foundation.org.hk/public
+
+//
+<?php
+                $product = 12 / $numOfCols;
+                //Setting the counter variable
+                $counter = 0;
+                foreach ($results as $product) { 
+                    //Checking the value of counter variable and then implementing the corresponding code
+                    if($counter == 6){
+                        $counter=0;
+            ?>
