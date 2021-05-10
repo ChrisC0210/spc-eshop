@@ -85,3 +85,14 @@ eshop@spc-foundation.org.hk
                     if($counter == 6){
                         $counter=0;
             ?>
+>>>index_test.blade.php
+>>>index.html
+(1)Edit html cards:
+border-radius
+hover effect
+
+===
+>>>210507
+/client/www.spc-foundation.org.hk/resources/views/frontend/shopping
+
+>>>collectionPage.blade.php
