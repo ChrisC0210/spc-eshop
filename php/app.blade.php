@@ -54,12 +54,28 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">Categories</a>
-						<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown03">
-							<a class="dropdown-item" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 1]) !!}">{{ \App\ProductCat::find(1)->label_eng }}</a>
-							<a class="dropdown-item" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 2]) !!}">{{ \App\ProductCat::find(2)->label_eng }}</a>
-							<a class="dropdown-item" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 3]) !!}">{{ \App\ProductCat::find(3)->label_eng }}</a>
-							<a class="dropdown-item" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 4]) !!}">{{ \App\ProductCat::find(4)->label_eng }}</a>
-							<a class="dropdown-item" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 5]) !!}">{{ \App\ProductCat::find(5)->label_eng }}</a>
+						<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown03" >
+							{{-- lv2--}}
+							<?
+								$productCats = \App\ProductCat::where('parent_id',0)->get();	
+							?>
+							@foreach($productCats as $productCat)
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">{{ $productCat->label_eng }}</a>
+							<div class="dropdown-menu text-h-1-5-1" aria-labelledby="dropdown03" >
+								<?
+									$productCat2s = \App\ProductCat::where('parent_id', $productCat->product_cat_id)->get();	
+
+								?>
+								@if(isset($productCat2s))
+									@foreach($productCat2s as $productCat2)
+									<a class="dropdown-item" href="{!! route('shopping::collectionPage', ['product_cat_id'=> $productCat2->product_cat_id]) !!}">{{ $productCat2->label_eng }}</a>
+									@endforeach
+								@endif
+								
+							</div>
+							@endforeach
+							
 						</div>
 					</li>
 				</ul>

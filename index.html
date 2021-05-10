@@ -133,6 +133,44 @@
 	position: relative;
 	top: -10px;
 }
+/* menu */
+
+  
+        .dropdown-menu a:hover {
+            color: #274778;
+            background: #d5d5d5;
+        }
+				.dropdown-sub a:hover{
+					color: #274778;
+					background: #ffffff;
+				}
+  
+        .dropdown-menu li.dropdown-sub {
+            min-width: 100%;
+            /* Set width of the dropdown */
+            background: #f2f2f2;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+        }
+  
+        ul li:hover li.dropdown-sub {
+            display: block;
+            /* Display the dropdown */
+        }
+				.dropdown-menu{
+					border: 0px solid rgba(0, 0, 0, 0)!important;
+				}
+
+				@media screen and (max-width: 1300px){
+					.nav-left ul {
+					padding-top: 0px;
+				}
+
+				}
+
+				
 </style>
 
 <body>
@@ -162,7 +200,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="promotion.html">Promotion</a>
 					</li>
-					<li class="nav-item dropdown">
+					<!-- <li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false">Categories</a>
 						<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown03">
@@ -172,6 +210,23 @@
 							<a class="dropdown-item" href="#">Education</a>
 							<a class="dropdown-item" href="#">Electronics</a>
 							<a class="dropdown-item" href="#">Miscellaneous</a>
+						</div>
+					</li> -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Categories</a>
+						<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown04">
+							<ul>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle dropdown-sub" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">222222</a>
+							<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown05">
+								<a class="nav-link " href="#">subb </a>
+								<a class="nav-link " href="#">subb </a>
+							</div>
+								</li>
+							</ul>
+
 						</div>
 					</li>
 				</ul>
@@ -661,6 +716,22 @@
 // 			}});
 // 
 // });
+//menu
+$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+  if (!$(this).next().hasClass('show')) {
+    $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+  }
+  var $subMenu = $(this).next('.dropdown-menu');
+  $subMenu.toggleClass('show');
+
+
+  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+    $('.dropdown-submenu .show').removeClass('show');
+  });
+
+
+  return false;
+});
 </script>
 </body>
 
