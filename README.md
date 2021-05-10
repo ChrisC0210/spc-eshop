@@ -96,3 +96,17 @@ hover effect
 /client/www.spc-foundation.org.hk/resources/views/frontend/shopping
 
 >>>collectionPage.blade.php
+commit ca8e2dd255ad758b1155a4d96acc9541034e41bf (HEAD -> main, origin/main)
+Author: Chris Chen <chiandeye@gmail.com>
+Date:   Mon May 10 14:57:12 2021 +0800
+
+    (1)change html:
+    index.html
+    priduct.tml
+    (2)change php:
+    collectionPage.blade.php
+    index_test.blade.php
+
+>>>210510
+add product-2.html
+

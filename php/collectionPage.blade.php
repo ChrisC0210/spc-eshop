@@ -144,7 +144,7 @@
     </div>
     <!-- breadcrumb end -->
     <!-- tab start -->
-    <div class="container">
+    <!-- <div class="container">
       <div class=" nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="flex-wrap: unset !important;overflow: scroll;">
       <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
 				<div class="media">
@@ -170,16 +170,16 @@
 					</div>
 				</div>
 			</a>
-    </div>
+    </div> -->
     <!-- tab end -->
   <!-- tab content start-->
-	<div class="text-h-1-4-1">
+	<!-- <div class="text-h-1-4-1">
 		<div class="row">
 			<div class="col-12 mt-4">
 				<div class="tab-content" id="v-pills-tabContent">
-					<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+					<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"> -->
 						<!-- card -->
-            <div class="text-h-1-4-1">
+            <!-- <div class="text-h-1-4-1">
               <div class="row">
                 @foreach(\App\Product::all() as $product)
                   <a href="#" class="card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
@@ -200,12 +200,12 @@
                   </a>
                 @endforeach
               </div>
-            </div>
+            </div> -->
 						<!-- card -->
-					</div>
-					<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+					<!-- </div>
+					<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"> -->
 						<!-- card -->
-            <div class="text-h-1-4-1">
+            <!-- <div class="text-h-1-4-1">
               <div class="row">
                 @foreach(\App\Product::all() as $product)
                   <a href="#" class="card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
@@ -226,12 +226,12 @@
                   </a>
                 @endforeach
               </div>
-            </div>
+            </div> -->
 						<!-- card -->
-					</div>
-					<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+					<!-- </div>
+					<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"> -->
 						<!-- card -->
-            <div class="text-h-1-4-1">
+            <!-- <div class="text-h-1-4-1">
               <div class="row">
                 @foreach(\App\Product::all() as $product)
                   <a href="#" class="card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
@@ -253,14 +253,38 @@
                   </a>
                 @endforeach
               </div>
-            </div>
+            </div> -->
 						<!-- card -->
-					</div>
+					<!-- </div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- tab contant end-->
+  <!-- card -->
+<div class="container text-center text-h-2-5-2 gray-800">
+	<div class="row ">
+                @foreach(\App\Product::all() as $product)
+                  <a href="#" class="d-flex card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
+                    <div class="card mb-4 shadow-sm img-hover-zoom flex-fill">
+                    <div class="btn-card-box">
+                        <button class="text-h-2-4-2">Shop Now</button>
+                      </div>
+                      <img src="{{ asset($product->image_1) }}" class="bd-placeholder-img card-img-top" alt="..." width="100%"
+                        height="225">
+                      <div class="card-body">
+                        <h5 class="card-title text-h-2-4-2">{{ $product->label_eng }}</h5>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                @endforeach
+	</div>
+</div>
+<!-- card -->
     <!-- product start -->
     <!-- <div class="container">
       <div class="row mb-4 text-r-1-3-1 product-all-box"> -->
