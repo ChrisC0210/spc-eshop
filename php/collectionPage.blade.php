@@ -149,7 +149,7 @@
     
   <!-- card -->
     {{-- product category lv.2 --}}
-    <div class="container text-center text-h-2-5-2 gray-800" style="min-height: 30vh;">
+    <div class="container text-center text-h-2-5-2 gray-800" style="min-height: 50vh;">
       <div class="row ">
         @foreach($productCat2s as $productCat2)
           <a href="{!! route('shopping::collectionPage', ['product_cat_id'=> $productCat2->product_cat_id]) !!}" class="d-flex card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
