@@ -34,7 +34,7 @@
 	.dropdown-menu li.dropdown-sub {
 		min-width: 100%;
 		/* Set width of the dropdown */
-		background: #f2f2f2;
+		background: #f7f7f7;
 		display: none;
 		position: absolute;
 		z-index: 999;
@@ -47,13 +47,16 @@
 	}
 
 	.dropdown-menu {
+		background-color: #fcfcfc;
 		border: 0px solid rgba(0, 0, 0, 0.3) !important;
+		box-shadow: 0px 2px 2px #00000049;
+		-webkit-box-shadow: 0px 2px 2px #00000049;
 	}
 	.show.show-dropdown {
 			display: block ;
-			position: fixed ;
-			top: 10px ;
-			left: 174px ;
+			/* position: fixed ; */
+			top: 0px ;
+			left: 178px ;
 		}
 	@media screen and (max-width: 1300px) {
 		.nav-left ul {
@@ -61,6 +64,11 @@
 		}
 
 	}
+	.nav-link.dropdown-toggle.dropdown-sub::after {
+  border: none;
+  content: " ";
+  vertical-align: 0;
+}
 </style>
 <body>
   @include('frontend.layouts.top_bar')
@@ -136,7 +144,10 @@
 							@foreach($productCats as $productCat)
 							<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle dropdown-sub" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false">{{ $productCat->label_eng }}</a>
+							aria-expanded="false">{{ $productCat->label_eng }}
+							<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+											<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+										</svg></a>
 							<div class="dropdown-menu text-h-1-4-1 show-dropdown" aria-labelledby="dropdown05" >
 								<?
 									$productCat2s = \App\ProductCat::where('parent_id', $productCat->product_cat_id)->get();	
@@ -384,6 +395,7 @@
 
 			return false;
 		});
+		AOS.init();
 	</script>
 
 @yield('scripts')

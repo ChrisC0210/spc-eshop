@@ -119,10 +119,10 @@
 		font-size:20px;
 	}
 }
-.card-text{
-	position: relative;
-	top: -10px;
-}
+.card-text {
+		position: relative;
+		top: -18px;
+	}
 </style>
 	<!-- slider -->
 
@@ -133,12 +133,16 @@
 				<!-- text -->
 				<div class="col-xl-5 col-lg-5 col-sm-8 text-center slide-box">
 					<div class="col-12">
-						<div class="card-body" style="background-color: rgba(255, 255, 255, 0.6);">
+						<div class="card-body" style="background-color: rgba(255, 255, 255, 0.6);" data-aos="fade-left" data-aos-duration="1500">
 							<h4 class="mt-lg-4 text-m-6-7-6 spc-blue">Discover spring 2021</h4>
 							<div class="text-h-2-4-2">Lorem ipsum dolor sit amet</div>
 							<div class="mt-lg-4 mb-4 text-h-1-4-1 d-flex justify-content-center">
 								{{-- <button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">Shop Now</button> --}}
-								<a type="button" class="col-lg-12 col-sm-12 btn btn-primary btn-block" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 1]) !!}">Shop Now</a>
+								<a type="button" class="col-lg-12 col-sm-12 btn btn-primary btn-block" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 1]) !!}">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+										<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+									</svg>
+								Shop Now</a>
 							</div>
 						</div>
 						<!-- card-body -->
@@ -151,12 +155,17 @@
 				<!-- text -->
 				<div class="col-xl-5 col-lg-5 col-sm-8 text-center slide-box">
 					<div class="col-12">
-						<div class="card-body" style="background-color: rgba(255, 255, 255, 0.6);">
+						<div class="card-body" style="background-color: rgba(255, 255, 255, 0.6);" data-aos="fade-left" data-aos-duration="1500">
 							<h4 class="mt-lg-4 text-m-6-7-6 spc-blue">Discover spring 2021</h4>
 							<div class="text-h-2-4-2">Lorem ipsum dolor sit amet</div>
 							<div class="mt-lg-4 mb-4 text-h-1-4-1 d-flex justify-content-center">
-								{{-- <button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">Shop Now</button> --}}
-								<a type="button" class="col-lg-12 col-sm-12 btn btn-primary btn-block" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 1]) !!}">Shop Now</a>
+								{{-- <button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">
+									Shop Now</button> --}}
+								<a type="button" class="col-lg-12 col-sm-12 btn btn-primary btn-block" href="{!! route('shopping::collectionPage', ['product_cat_id'=> 1]) !!}">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+										<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+									</svg>
+								Shop Now</a>
 
 							</div>
 						</div>
@@ -179,17 +188,16 @@
 			<h4 class="col-12 text-center mb-4 text-h-3-4-3 spc-red">Best Sellers</h4>
 		</div>
 		<div class="container text-h-1-4-1">
-			<div class="row">
+			<div class="row" data-aos="fade-up" data-aos-duration="500">
 			@foreach(\App\Product::all() as $product)
 				<a href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}" class="card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
 					<div class="card mb-4 shadow-sm img-hover-zoom">
 					<div class="btn-card-box">
 							<button class="text-h-2-4-2">View</button>
 						</div>
-						<img src="{{ asset($product->image_1) }}" class="bd-placeholder-img card-img-top" alt="..." width="100%"
-							height="225">
+						<img src="{{ $product->image_1 ? asset($product->image_1):asset('assets/icon/no_image.png') }}" class="bd-placeholder-img card-img-top" alt="..." width="100%" height="225">
 						<div class="card-body">
-							<h5 class="card-title text-h-2-4-2">{{ $product->label_eng }}</h5>
+							<h5 class="card-title text-h-2-4-2 d-inline-block text-truncate" style="max-width: 100%;">{{ $product->label_eng }}</h5>
 							<p class="card-text">${{ $product->unit_price }}</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
@@ -214,7 +222,7 @@
 		</div>
 		<div class="container text-h-1-4-1">
 			<div class="d-flex justify-content-between"> 
-				<div class="row">
+				<div class="row" data-aos="fade-up" data-aos-duration="500">
 					{{-- <p>{{ print_r($product_cats) }}</p> --}}
 					<a href="{!! route('shopping::collectionPage', ['product_cat_id'=> $product_cat1->product_cat_id]) !!}" class="mb-4 card-box col-12 col-lg-6 col-sm-12">
 						<div class="img-hover-zoom">
@@ -272,7 +280,7 @@
 </div>
 <!-- card -->
 <!-- newsletter -->
-<section class="container p-4 white text-h-2-4-2 gray-800 news-box" style="background-image:url({{asset('assets/img/spc-banner-1.png')}});">
+<section class="container p-4 white text-h-2-4-2 gray-800 news-box" style="background-image:url({{asset('assets/img/spc-banner-1.png')}});" data-aos="fade-up" data-aos-duration="500">
 	<div class="col-lg-8 col-sm-12">
 		<h3 class="mb-4 text-m-5-7-5">Sign up our newsletter</h3>
 		<div class="mb-4">Sign up for our newsletter to follow our stories, receive product news, offers, updates and special invites.</div>
@@ -280,18 +288,23 @@
 			<div class="form-group">
 				<!-- <label for="exampleFormControlInput1">Email address</label> -->
 				<input type="email" class="form-control mr-4 mb-4 news-input" id="exampleFormControlInput1" placeholder="Your email address">
-				<button type="submit" class="mb-4 btn btn-white">Sign me Up</button>
+				<button type="submit" class="mb-4 btn btn-white">
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+							<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+						</svg>	
+				Sign me Up</button>
 			</div>
 		</form>
 	</div>
 </section>
 <!-- newsletter -->
-
+<script src="<?=asset('./dist/js/aos.js')?>"></script>
+<script>
+		$(document).ready(function(){
+			AOS.init();
+	});
+</script>
 @endsection
 @push('script')
 
-<script>
-
-
-</script>
 @endpush

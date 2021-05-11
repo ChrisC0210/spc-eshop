@@ -177,13 +177,21 @@
 
 	.dropdown-menu {
 		border: 0px solid rgba(0, 0, 0, 0.3) !important;
+		box-shadow: 0px 2px 2px #00000029;
+		-webkit-box-shadow: 0px 2px 2px #00000029;
 	}
 	.show.show-dropdown {
 			display: block ;
 			position: fixed ;
 			top: 10px ;
 			left: 174px ;
+			background-color: #fcfcfc;
 		}
+		.nav-link.dropdown-toggle.dropdown-sub::after {
+  border: none;
+  content: " ";
+  vertical-align: 0;
+}
 	@media screen and (max-width: 1300px) {
 		.nav-left ul {
 			padding-top: 0px;
@@ -233,12 +241,17 @@
 					</li> -->
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false">Categories</a>
+							aria-expanded="false">Categories
+						</a>
 						<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown04">
 							<ul>
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle dropdown-sub" href="#" id="dropdown05" data-toggle="dropdown"
-										aria-haspopup="true" aria-expanded="false">222222</a>
+										aria-haspopup="true" aria-expanded="false">222222
+										<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+											<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+										</svg>
+									</a>
 									<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown05">
 										<a class="nav-link " href="#">subb </a>
 										<a class="nav-link " href="#">subb </a>
@@ -355,12 +368,16 @@
 				<img src="./assets/img/spc-slider-1.jpg" />
 				<!-- text -->
 				<div class="col-xl-5 col-lg-5 col-sm-8 text-center slide-box">
-					<div class="col-12">
+					<div class="col-12" data-aos="fade-left" data-aos-duration="1500">
 						<div class="card-body" style="background-color: rgba(255, 255, 255, 0.6);">
 							<h4 class="mt-lg-4 text-m-6-7-6 spc-blue">Discover spring 2021</h4>
 							<div class="text-h-2-4-2">Lorem ipsum dolor sit amet</div>
 							<div class="mt-lg-4 mb-4 text-h-1-4-1 d-flex justify-content-center">
-								<button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">Shop Now</button>
+								<button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+										<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+									</svg>
+									Shop Now</button>
 							</div>
 						</div>
 						<!-- card-body -->
@@ -384,7 +401,7 @@
 			<h4 class="col-12 text-center mb-4 text-h-3-4-3 spc-red">Best Sellers</h4>
 		</div>
 		<div class="container text-h-1-4-1">
-			<div class="row">
+			<div class="row" data-aos="fade-up">
 				<a href="#" class="card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
 					<div class="card mb-4 shadow-sm img-hover-zoom">
 						<div class="btn-card-box">
@@ -518,7 +535,7 @@
 		</div>
 		<div class="container text-h-1-4-1">
 			<div class="d-flex justify-content-between">
-				<div class="row">
+				<div class="row" data-aos="fade-up" data-aos-duration="1000">
 					<a href="#" class="mb-4 card-box col-12 col-lg-6 col-sm-12">
 						<div class="img-hover-zoom">
 							<img src="./assets/img/spc-be-1.png" alt="Nature" style="width:100%;">
@@ -609,7 +626,7 @@
 
 	<!-- newsletter -->
 	<section class="container p-4 white text-h-2-4-2 gray-800 news-box"
-		style="background-image:url(./assets/img/spc-banner-1.png);">
+		style="background-image:url(./assets/img/spc-banner-1.png);" data-aos="fade-up" data-aos-duration="1500">
 		<div class="col-lg-8 col-sm-10">
 			<h3 class="mb-4 text-m-5-7-5">Sign up our newsletter</h3>
 			<div class="mb-4">Sign up for our newsletter to follow our stories, receive product news, offers, updates and
@@ -619,7 +636,11 @@
 					<!-- <label for="exampleFormControlInput1">Email address</label> -->
 					<input type="email" class="form-control mr-4 mb-4 news-input" id="exampleFormControlInput1"
 						placeholder="Your email address">
-					<button type="submit" class="mb-4 btn btn-white">Sign me Up</button>
+					<button type="submit" class="mb-4 btn btn-white">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+							<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+						</svg>
+						Sign me Up</button>
 				</div>
 			</form>
 		</div>
@@ -767,6 +788,7 @@
 
 			return false;
 		});
+		AOS.init();
 	</script>
 </body>
 
