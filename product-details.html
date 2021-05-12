@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="./dist/css/owl.carousel.min.css" />
 	<link rel="stylesheet" href="./dist/css/owl.theme.default.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<!-- CSS STYLE-->
+<link rel="stylesheet" type="text/css" href="./dist/css/xzoom.css" media="all" />
 </head>
 <style>
 	.swiper-slide {
@@ -161,6 +164,25 @@
 
 <!-- product -->
 <div class="container">
+	<!-- div -->
+    <!-- lens options start -->
+    <section id="lens">
+			<div class="row">
+				<div class="large-12 column"><h3>Lens options</h3></div>
+				<div class="large-5 column">
+					<div class="xzoom-container">
+						<img class="xzoom3" src="./assets/img/spc-product-1.png" xoriginal="./assets/img/spc-product-1.png" />
+						<div class="xzoom-thumbs">
+							<a href="./assets/img/spc-product-1.png"><img class="xzoom-gallery3" width="80" src="./assets/img/spc-product-1.png"  xpreview="i./assets/img/spc-product-1.png" title="The description goes here"></a>
+							<a href="./assets/img/spc-product-2.png"><img class="xzoom-gallery3" width="80" src="./assets/img/spc-product-2.png" title="The description goes here"></a>
+						</div>
+					</div>        
+				</div>
+				<div class="large-7 column"></div>
+			</div>
+			</section>   
+			<!-- lens options end -->
+	<!-- div -->
 	<div class="col-12 row d-flex justify-content-between">
 		<div class="col-lg-6 col-md-12">
 			<div class=" ">
@@ -398,6 +420,8 @@
 <script src="./dist/js/owl.carousel.min.js"></script>
 <!-- //shopping-cart -->
 <script src="./dist/js/shopping-cart.js"></script>
+<!-- XZOOM JQUERY PLUGIN  -->
+<script type="text/javascript" src="./dist/js/xzoom.min.js"></script>
 <script>
 	$(document).ready(function () {
 		//nav
@@ -465,7 +489,12 @@
 				},
 			}
 		});
-
+//zoom
+/* calling script */
+$(".xzoom").xzoom({
+	position:'right',
+	rootOutput:true,
+});
 	});
 </script>
 

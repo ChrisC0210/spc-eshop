@@ -183,8 +183,8 @@
 
       <div class="row mb-4 text-r-1-3-1 product-all-box"> 
         @foreach($productCat->Product()->orderBy('product.label_eng')->get() as $product) 
-          <div class="col-6 col-lg-3 col-md-6 col-sm-6  owl-carousel-card mb-4">
-            <div class="card p-2"> 
+          <div class="col-sm d-flex col-6 col-lg-3 col-md-6 col-sm-6  owl-carousel-card mb-4">
+            <div class="card p-2 card-body flex-fill"> 
               <div class=" ">
                 <a href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">
                     {{-- <img class="mb-4 card-img-top" src="{!! asset($product->image_1) !!}" alt=""> --}}

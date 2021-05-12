@@ -69,22 +69,6 @@
   content: " ";
   vertical-align: 0;
 }
-.none {
-		display: none;
-	}
-	.add-toggle{
-		color: yellow;
-}
-.nav-link.dropdown-toggle.add-toggle::after {
-	display: inline-block;
-  margin-left: .255em;
-  vertical-align: .255em;
-  content: " ";
-  border-top: .3em solid;
-  border-right: .3em solid transparent;
-  border-bottom: 0;
-  border-left: .3em solid transparent;
-	}
 </style>
 <body>
   @include('frontend.layouts.top_bar')
@@ -375,20 +359,57 @@
 			},
 		});
 		//owl
-		$('.owl-carousel').owlCarousel({
-			nav:true,
+		// $('.owl-carousel').owlCarousel({
+		// 	nav:true,
+		// 	dots: false,
+		// 	margin:20,
+		// 	items:1,
+		// 	responsive:{
+		// 		900:{
+		// 			items:4,
+		// 		},
+		// 		800:{
+		// 			items:1,
+		// 		},
+		// 		500:{
+		// 			items:1,
+		// 		},
+		// 	}
+		// });
+				//owl
+				$('.owl-carousel-1').owlCarousel({
+			nav: true,
 			dots: false,
-			margin:20,
-			items:1,
-			responsive:{
-				900:{
-					items:4,
+			loop: true,
+			autoplay:true,
+			autoplayTimeout:3000,
+			autoplayHoverPause:true,
+			margin: 20,
+			items: 4,
+			responsive: {
+				780: {
+					items: 4,
 				},
-				800:{
-					items:1,
+				300: {
+					items: 2,
 				},
-				500:{
-					items:1,
+			}
+		});
+		$('.owl-carousel-2').owlCarousel({
+			nav: true,
+			dots: false,
+			margin: 20,
+			items: 1,
+			center: true,
+			loop: true,
+			URLhashListener: true,
+			startPosition: 'URLHash',
+			responsive: {
+				780: {
+					items: 1,
+				},
+				480: {
+					items: 1,
 				},
 			}
 		});
