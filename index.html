@@ -180,23 +180,43 @@
 		box-shadow: 0px 2px 2px #00000029;
 		-webkit-box-shadow: 0px 2px 2px #00000029;
 	}
+
 	.show.show-dropdown {
-			display: block ;
-			position: fixed ;
-			top: 10px ;
-			left: 174px ;
-			background-color: #fcfcfc;
-		}
-		.nav-link.dropdown-toggle.dropdown-sub::after {
-  border: none;
-  content: " ";
-  vertical-align: 0;
-}
+		display: block;
+		position: fixed;
+		top: 10px;
+		left: 174px;
+		background-color: #fcfcfc;
+	}
+
+	.nav-link.dropdown-toggle.dropdown-sub::after {
+		border: none;
+		content: " ";
+		vertical-align: 0;
+	}
+
 	@media screen and (max-width: 1300px) {
 		.nav-left ul {
 			padding-top: 0px;
 		}
 
+	}
+
+	.none {
+		display: none;
+	}
+	.add-toggle{
+		color: yellow;
+}
+.nav-link.dropdown-toggle.add-toggle::after {
+	display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: " ";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
 	}
 </style>
 
@@ -248,8 +268,10 @@
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle dropdown-sub" href="#" id="dropdown05" data-toggle="dropdown"
 										aria-haspopup="true" aria-expanded="false">222222
-										<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-											<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+										<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+											class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+											<path
+												d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
 										</svg>
 									</a>
 									<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown05">
@@ -374,8 +396,10 @@
 							<div class="text-h-2-4-2">Lorem ipsum dolor sit amet</div>
 							<div class="mt-lg-4 mb-4 text-h-1-4-1 d-flex justify-content-center">
 								<button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">
-									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
-										<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2"
+										viewBox="0 0 16 16">
+										<path
+											d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
 									</svg>
 									Shop Now</button>
 							</div>
@@ -637,8 +661,10 @@
 					<input type="email" class="form-control mr-4 mb-4 news-input" id="exampleFormControlInput1"
 						placeholder="Your email address">
 					<button type="submit" class="mb-4 btn btn-white">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-							<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+							viewBox="0 0 16 16">
+							<path
+								d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
 						</svg>
 						Sign me Up</button>
 				</div>
@@ -789,6 +815,40 @@
 			return false;
 		});
 		AOS.init();
+	</script>
+	<script>
+		jQuery(document).ready(function () {
+
+if (document.documentElement.clientWidth < 950) {
+// do nothing below 950px
+$('.bi-caret-right-fill').addClass('none');
+// if ($('#dropdown05').hasClass("dropdown-sub")) {
+// 						$('.bi-caret-right-fill').addClass('none');
+// 						//$('#homeSecLink').removeClass('active');
+// 					} else {
+// 						$('.bi-caret-right-fill').removeClass('none');
+// 						//$('#homeSecLink').addClass('active');
+// 					}
+$('.dropdown-sub').addClass('add-toggle');
+ }
+else {
+	$('.bi-caret-right-fill').removeClass('none');
+	
+}
+});
+// 			$(window).on("resize", function () {
+// 				if ($(window).width() > 300 && $(window).width() < 700) {
+// 					// do the animations
+// 					if ($('#dropdown05').hasClass("dropdown-sub")) {
+// 						$('.bi-caret-right-fill').addClass('none');
+// 						//$('#homeSecLink').removeClass('active');
+// 					} else {
+// 						$('.bi-caret-right-fill').removeClass('none');
+// 						//$('#homeSecLink').addClass('active');
+// 					}
+// 				}
+// 			}
+// });
 	</script>
 </body>
 
