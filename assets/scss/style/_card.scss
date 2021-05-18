@@ -123,6 +123,8 @@
 			//background-color: $gray-500;
 			//opacity: 0.5;
 			//object-fit: scale-down;
+			text-decoration: none;
+			color: $spc-blue;
 			@media screen and (max-width: 900px) {
 				object-fit: fill;
 			}
@@ -155,11 +157,17 @@
 					padding: 140px 60px;
 				}
 				@media screen and (max-width: 800px) {
-					padding: 100%;
+					//padding: 100%;
 					opacity: 0.4;
-					//padding: 20px 60px;
+					padding: 100px 74px;
 				}
 			}
+		}
+	}
+	h5, p{
+		&:hover,:active{
+			text-decoration: none;
+			color: $spc-blue;
 		}
 	}
 }
@@ -220,7 +228,12 @@
 		background-color: $spc-blue;
 
 		}
+		@media screen and (max-width: 800px) {
+			font-size: 20px;
+			padding: 10px 10px 10px 10px !important;
+		}
 	}
+	
 
 }
 .owl-next{
@@ -249,6 +262,10 @@
 		border: solid 2px #274778;
 
 		border-radius: 10px !important;
+		}
+		@media screen and (max-width: 800px) {
+			font-size: 20px;
+			padding: 10px 10px 10px 10px !important;
 		}
 	}
 

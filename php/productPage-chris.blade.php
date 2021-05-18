@@ -5,55 +5,21 @@
   /* . {
       text-align: center;
   } */
-	.btn-primary{
-		-webkit-appearance: none;
-	}
-  .form-control{
-		-webkit-appearance: none;
-  }
   .swiper-slide {
 		background-position: center;
 		background-size: cover;
 		width: 100%;
 		height: 100%;
 	}
-
 	.swiper-container {
 		width: 100%;
 		height: 100%;
 	}
-  .owl-carousel .owl-item img {
-    /* width: 200px; */
-  /* min-width: 350px; */
-  /* margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-.owl-carousel .owl-item img {
+/* .owl-carousel .owl-item img {
   display: block;
   width: 100%;
-}
-@media screen and (min-width: 2900px) {
-/* .owl-stage-outer{
   width: 300px;
-  overflow:hidden ;
 }  */
-/* .owl-item.active{
-  min-width: 350px !important;
-} */
-/* .owl-carousel-2.owl-item{
-  min-width:400px;
-  overflow: hidden;
-}
-.owl-carousel-2.owl-stage{
-  display: flex;
-
-} */
-/* .owl-item.active{
-  width: 350px;
-} */
-	}
 </style>
 
   <div class="container text-h-1-4-1">
@@ -72,11 +38,11 @@
   </div>
   <!-- product -->
 	<div class="container">
-		<div class="col-12 row d-flex justify-content-between">
-			<div class="col-lg-5 col-md-12">
-        <div class=" ">
+		<div class="row d-flex justify-content-between">
+			<div class="col-lg-4 col-md-12">
+        <!-- <div class=" ">
           <img src="#" alt="">
-        </div>
+        </div> -->
         {{-- product pic --}}
 				<div class="owl-carousel-2 owl-carousel owl-theme">
           <div class="item" data-hash="spc-product-1"><img src="{{ $product->image_1 ? asset($product->image_1):asset('assets/icon/no_image.png') }}" alt="spc-product">
@@ -93,7 +59,7 @@
 				</div>
         
         {{-- thumbnail pic --}}
-				<div class="d-flex col-6">
+				<div class="col-12">
 					<a class="button secondary url" href="#spc-product-1">
 						<img class="card-img-top" src="{{ $product->image_1 ? asset($product->image_1):asset('assets/icon/no_image.png') }}" alt="spc-product">
 					</a>
@@ -117,7 +83,7 @@
         </div> -->
 			</div>
       {{-- product add to cart --}}
-      <form id="cartForm" class="row col-lg-6 col-sm-12" action="{!! route('shoppingCart::frontAddCart', ['product_id'=>$product->product_id]) !!}">
+      <form id="cartForm" class="col-lg-6 col-sm-12" action="{!! route('shoppingCart::frontAddCart', ['product_id'=>$product->product_id]) !!}">
         @include('frontend.layouts.pop_msg')
         <div class="mt-2 col-lg-10 col-md-8"> 
           {{-- mt-2 col-lg-10 col-md-8 --}}
@@ -266,7 +232,7 @@
 	<!-- product -->
 	<hr>
 	<!-- card -->
-	<div class="row mt-4 mb-4 text-center text-h-1-4-1 d-flex justify-content-center">
+	<div class="mt-4 mb-4 text-center text-h-1-4-1 d-flex justify-content-center">
 		<h4 class="col-lg-5 col-sm-10 mt-4 mb-4 text-m-6-7-6 white spc-title">You may also like</h4>
 	</div>
 	<!-- card -->

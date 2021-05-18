@@ -112,3 +112,11 @@ add product-2.html
 
 /client/www.spc-foundation.org.hk/resources/views/frontend/shopping
 
+>>210513
+>>css
+>>>/client/www.spc-foundation.org.hk/public/dist/css
+Fixed RWD style
+
+>>>productPage-chris.blade.php
+Fixed RWD style
+owl-carousel:.owl-nav button.owl-prev

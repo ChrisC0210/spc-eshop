@@ -12,6 +12,7 @@
 //@import "../scss/style/banner";
 @import "../scss/style/btn";
 @import "../scss/style/card";
+@import "../scss/style/card2";
 //@import "../scss/style/img";
 //@import "../scss/style/nav";
 //@import "../scss/style/navList";
@@ -36,4 +37,15 @@
     a {
         color: $spc-blue;
     }
+}
+.btn-primary{
+	-webkit-appearance: none;
+}
+.form-control{
+	-webkit-appearance: none;
+}
+.nav-right{
+	a{
+		-webkit-appearance: none;
+	}
 }

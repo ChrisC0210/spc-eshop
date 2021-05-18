@@ -38,10 +38,10 @@
 	</div> -->
 	<div class=" row">
     @foreach($new_item_products as $product)
-      <a class="owl-carousel-card mb-4 mt-4 col col-lg-3 col-sm-6" href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">
-        <div class="card" style="border-radius: 4px;border: solid 1px #f5f5f5;">
+      <a class="owl-carousel-card mb-4 mt-4 col col-lg-3 col-sm-6 d-flex" href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">
+        <div class="card flex-fill" style="border-radius: 4px;border: solid 1px #f5f5f5;">
           <span class="badge badge-info" style="position: absolute; left:4px;top:4px;z-index: 999;">New</span>
-          <img src="<?= asset('assets/img/spc-product-'.$product->product_id.'.png')?>" class="card-img-top" alt="p1">
+          <img src="{{ $product->image_1 ? asset($product->image_1):asset('assets/icon/no_image.png') }}" class="card-img-top" alt="p1">
           <div class="card-body text-h-1-4-1">
             <h5 class="card-title text-h-1-4-1">{{ $product->label_eng }}</h5>
             <p class="card-text text-h-1-4-1">{{ moneyFormat($product->unit_price) }}</p>
