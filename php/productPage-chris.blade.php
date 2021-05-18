@@ -45,12 +45,13 @@
         </div> -->
         {{-- product pic --}}
 				<div class="owl-carousel-2 owl-carousel owl-theme">
+				<? /*
           <div class="item" data-hash="spc-product-1"><img src="{{ $product->image_1 ? asset($product->image_1):asset('assets/icon/no_image.png') }}" alt="spc-product">
-        </div>
-					<?  $ip=2;
+        </div>*/?>
+					<?  $ip=1;
           foreach($product->ProductImg as $k=>$productImg){
 						if(file_exists(storage_path('app/').$productImg->file_path)){?>
-						<div class="item" data-hash="spc-product-<?=$ip?>"><img src="<?=route('shopping::showProductImg', ['product_img_id'=>$productImg->product_img_id])?>" alt="spc-product">
+						<div class="item" data-hash="spc-product-<?=$ip?>"><img src="<?=route('shopping::showProductImg', ['product_img_id'=>$productImg->product_img_id])?>" alt="spc-product" width="300">
           </div>
 						<? 
 						$ip++;
@@ -60,16 +61,16 @@
         
         {{-- thumbnail pic --}}
 				<div class="col-12">
-					<a class="button secondary url" href="#spc-product-1">
+					<? /*<a class="button secondary url" href="#spc-product-1">
 						<img class="card-img-top" src="{{ $product->image_1 ? asset($product->image_1):asset('assets/icon/no_image.png') }}" alt="spc-product">
-					</a>
+					</a>*/?>
 					<? 
-					$ip=2;
+					$ip=1;
 					foreach($product->ProductImg as $k=>$productImg){
 						if(file_exists(storage_path('app/').$productImg->file_path)){?>
 		
 					<a class="button secondary url" href="#spc-product-<?=$ip?>">
-					<img src="{{ route('shopping::showProductImg', ['product_img_id'=>$productImg->product_img_id]) }}" alt="spc-product">
+					<img <?=$ip==1?'class="card-img-top"':''?> src="{{ route('shopping::showProductImg', ['product_img_id'=>$productImg->product_img_id]) }}" alt="spc-product">
 				</a>
 					<? 
 					$ip++;
@@ -113,9 +114,9 @@
               </p>
             @else --}}
             @if($product->is_product_attr!==1)
-              <span>$</span>
+              
               <span class="card-text mb-4 lead text-h-2-4-2" id="product_price">
-                {{ $product->unit_price }}
+                <span>$</span>{{ $product->unit_price }}
               </span>
             @endif
             {{-- @endif --}}
@@ -220,7 +221,7 @@
         </div>
         <div class="tab-pane fade" id="nav-media" role="tabpanel" aria-labelledby="nav-media-tab">
           <div class="video-container mt-4 mb-4">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/wf-JOATybhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="{{ $product->video_url }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -239,7 +240,7 @@
 
 	<!-- card -->
 	<div class="container owl-carousel-1 owl-carousel owl-theme owl-carousel-card">
-    @foreach(\App\Product::all() as $product)
+    @foreach(\App\Product::where('product_cat_id',$product->product_cat_id)->get() as $product)
     <div class="card d-flex">
       <a href="{!! route('shopping::productPage', ['product_cat_id'=>$product->product_cat_id, 'product_id'=>$product->product_id]) !!}">
         <img src="{{ $product->image_1 ? asset($product->image_1):asset('assets/icon/no_image.png') }}" class="card-img-top" alt="p1">
