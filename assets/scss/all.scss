@@ -1,3 +1,4 @@
+@import "../scss/style/color";
 //plugin
 @import "../scss/plugin/boostrap";
 @import "../scss/plugin/slick";
@@ -5,9 +6,10 @@
 @import "../scss/plugin/jsSlider";
 @import "../scss/plugin/aos";
 @import "../scss/plugin/sweetalert2";
+@import "../scss/plugin/smartmenu";
 
 //XX Style
-@import "../scss/style/color";
+//@import "../scss/style/color";
 @import "../scss/style/fonts";
 //@import "../scss/style/banner";
 @import "../scss/style/btn";

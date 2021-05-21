@@ -324,6 +324,8 @@
 	<script src="<?=asset('./dist/js/owl.carousel.min.js')?>"></script>
 		<!-- //shopping-cart -->
 		<script src="<?=asset('./dist/js/shopping-cart.js')?>"></script>
+			<!-- SmartMenus jQuery plugin -->
+			<script src="<?=asset('./dist/js/jquery.smartmenus.min.js')?>"></script>
 	<script>
 	$(document).ready(function(){
 		//nav
@@ -380,7 +382,7 @@
 				$('.owl-carousel-1').owlCarousel({
 			nav: true,
 			dots: false,
-			loop: true,
+			//loop: true,
 			autoplay:true,
 			autoplayTimeout:3000,
 			autoplayHoverPause:true,
@@ -401,7 +403,7 @@
 			margin: 20,
 			items: 1,
 			center: true,
-			loop: true,
+			//loop: true,
 			URLhashListener: true,
 			startPosition: 'URLHash',
 			responsive: {
@@ -442,7 +444,39 @@
 	});
 
 	</script>
+<script>
+// SmartMenus init
+$(function() {
+  $('#main-menu').smartmenus({
+    mainMenuSubOffsetX: -1,
+    mainMenuSubOffsetY: 4,
+    subMenusSubOffsetX: 6,
+    subMenusSubOffsetY: -6
+  });
+});
 
-@yield('scripts')
+// SmartMenus mobile menu toggle button
+$(function() {
+  var $mainMenuState = $('#main-menu-state');
+  if ($mainMenuState.length) {
+    // animate mobile menu
+    $mainMenuState.change(function(e) {
+      var $menu = $('#main-menu');
+      if (this.checked) {
+        $menu.hide().slideDown(250, function() { $menu.css('display', ''); });
+      } else {
+        $menu.show().slideUp(250, function() { $menu.css('display', ''); });
+      }
+    });
+    // hide mobile menu beforeunload
+    $(window).bind('beforeunload unload', function() {
+      if ($mainMenuState[0].checked) {
+        $mainMenuState[0].click();
+      }
+    });
+  }
+});
+	</script>
+  @yield('content')
 </html>
 
