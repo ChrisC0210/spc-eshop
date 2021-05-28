@@ -15824,6 +15824,12 @@ video::-webkit-media-controls {
   -webkit-transform-origin: 50% 50%;
 }
 
+@media screen and (max-width: 700px) {
+  .spc-logo {
+    width: 170px;
+  }
+}
+
 .nav-right {
   color: #414141;
   position: absolute;
