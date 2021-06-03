@@ -6,13 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>St. Paul’s College Foundation Limited – eShop</title>
 	<link rel="shortcut icon" type="image/x-icon" href="./assets/icon/spc.ico">
+	<link rel="stylesheet" href="./dist/css/all.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="./dist/css/owl.carousel.min.css" />
 	<link rel="stylesheet" href="./dist/css/owl.theme.default.min.css" />
-	<!--Animate CSS-->
-<link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
-<link rel="stylesheet" href="./dist/css/all.min.css">
-
 </head>
 <style>
 	.btn-primary {
@@ -179,7 +176,23 @@
 	}
 
 	.dropdown-menu {
-		border: 0px solid rgba(0, 0, 0, 0) !important;
+		border: 0px solid rgba(0, 0, 0, 0.3) !important;
+		box-shadow: 0px 2px 2px #00000029;
+		-webkit-box-shadow: 0px 2px 2px #00000029;
+	}
+
+	.show.show-dropdown {
+		display: block;
+		position: fixed;
+		top: 10px;
+		left: 174px;
+		background-color: #fcfcfc;
+	}
+
+	.nav-link.dropdown-toggle.dropdown-sub::after {
+		border: none;
+		content: " ";
+		vertical-align: 0;
 	}
 
 	@media screen and (max-width: 1300px) {
@@ -188,148 +201,130 @@
 		}
 
 	}
+
+	.none {
+		display: none;
+	}
+	.add-toggle{
+		color: yellow;
+}
+.nav-link.dropdown-toggle.add-toggle::after {
+	display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: " ";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+	}
 </style>
 
 <body>
 	<div class="text-center pt-2 header-promotion white text-h-1-4-1">Free Shipping Now!</div>
-	<!-- <div class="main-nav fixed-top">
-	</div> -->
-
-	<!-- test -->
-	<nav class="text-h-1-4-1 gray-800 sticky-top smart-bg" role="navigation">
-		<!-- Mobile menu toggle button (hamburger/x icon) -->
-		<input id="main-menu-state" type="checkbox" />
-		<label class="main-menu-btn" for="main-menu-state">
-			<span class="main-menu-btn-icon"></span> Toggle main menu visibility
-		</label>
-		<a href="/"  style="z-index: 99999;">
+	<div class="sticky-top spc-nav-all">
+		<a href="/">
 			<img class="spc-logo" src="./assets/icon/spc-eshop-logo.png" alt="spc-logo">
 		</a>
-		<!-- Sample menu definition -->
-		<ul id="main-menu" class="sm sm-clean mt-4">
-			<li><a href="http://www.smartmenus.org/">Home</a></li>
-			<li><a href="http://www.smartmenus.org/about/">About</a>
-				<ul>
-					<li><a href="http://www.smartmenus.org/about/introduction-to-smartmenus-jquery/">Introduction to SmartMenus jQuery</a></li>
-					<li><a href="http://www.smartmenus.org/about/themes/">Demos + themes</a></li>
-					<li><a href="http://vadikom.com/about/#vasil-dinkov">The author</a></li>
-					<li><a href="http://www.smartmenus.org/about/vadikom/">The company</a>
-						<ul>
-							<li><a href="http://vadikom.com/about/">About Vadikom</a></li>
-							<li><a href="http://vadikom.com/projects/">Projects</a></li>
-							<li><a href="http://vadikom.com/services/">Services</a></li>
-							<li><a href="http://www.smartmenus.org/about/vadikom/privacy-policy/">Privacy policy</a></li>
-						</ul>
+		<nav class=" text-h-1-4-1 gray-800">
+			<div id="nav-icon3">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="nav-left">
+				<ul class="d-flex ">
+					<li class="nav-item ">
+						<a class="nav-link" href="./new-items.html">New Items</a>
 					</li>
-				</ul>
-			</li>
-			<li><a href="http://www.smartmenus.org/download/">Download</a></li>
-			<li><a href="http://www.smartmenus.org/support/">Support</a>
-				<ul>
-					<li><a href="http://www.smartmenus.org/support/premium-support/">Premium support</a></li>
-					<li><a href="http://www.smartmenus.org/support/forums/">Forums</a></li>
-				</ul>
-			</li>
-			<li><a href="http://www.smartmenus.org/docs/">Docs</a></li>
-			<li><a href="#">Sub test</a>
-				<ul>
-					<li><a href="#">Dummy item</a></li>
-					<li><a href="#">Dummy item</a></li>
-					<li><a href="#" class="disabled">Disabled menu item</a></li>
-					<li><a href="#">Dummy item</a></li>
-					<li><a href="#">more...</a>
-						<ul>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">more...</a>
-								<ul>
-									<li><a href="#">Dummy item</a></li>
-									<li><a href="#" class="current">A 'current' class item</a></li>
-									<li><a href="#">Dummy item</a></li>
-									<li><a href="#">more...</a>
-										<ul>
-											<li><a href="#">subMenusMinWidth</a></li>
-											<li><a href="#">10em</a></li>
-											<li><a href="#">forced.</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Dummy item</a></li>
-									<li><a href="#">Dummy item</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-						</ul>
+					<li class="nav-item">
+						<a class="nav-link" href="pre-orders.html">Pre-orders</a>
 					</li>
-				</ul>
-			</li>
+					<li class="nav-item">
+						<a class="nav-link" href="limited-edition.html">Limited Edition</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="promotion.html">Promotion</a>
+					</li>
+					<!-- <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Categories</a>
+						<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown03">
+							<a class="dropdown-item" href="./product.html">Apparel</a>
+							<a class="dropdown-item" href="#">Accessories</a>
+							<a class="dropdown-item" href="#">Glassware</a>
+							<a class="dropdown-item" href="#">Education</a>
+							<a class="dropdown-item" href="#">Electronics</a>
+							<a class="dropdown-item" href="#">Miscellaneous</a>
+						</div>
+					</li> -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Categories
+						</a>
+						<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown04">
+							<ul>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle dropdown-sub" href="#" id="dropdown05" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">222222
+										<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+											class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+											<path
+												d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+										</svg>
+									</a>
+									<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown05">
+										<a class="nav-link " href="#">subb </a>
+										<a class="nav-link " href="#">subb </a>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle dropdown-sub" href="#" id="dropdown05" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">333</a>
+									<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown05">
+										<a class="nav-link " href="#">subb </a>
+										<a class="nav-link " href="#">subb </a>
+									</div>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle dropdown-sub" href="#" id="dropdown05" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">333</a>
+									<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown05">
+										<a class="nav-link " href="#">subb </a>
+										<a class="nav-link " href="#">subb </a>
+									</div>
+								</li>
+							</ul>
 
-		</ul>
-		<div class="nav-right d-flex">
-			<li class="nav-item dropdown" style="margin-top: -14px;">
-				<a class=" nav-link dropdown-toggle mb-4" href="#" id="dropdown0" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false">
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="nav-right d-flex">
+				<li class="nav-item dropdown" style="margin-top: -14px;">
+					<a class=" nav-link dropdown-toggle mb-4" href="#" id="dropdown0" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
+							<g id="Group_1072" data-name="Group 1072" transform="translate(-197 -210)">
+								<path id="Path_873" data-name="Path 873" d="M0,0H50V50H0Z" transform="translate(197 210)" fill="#fff" />
+								<g id="Group_1071" data-name="Group 1071" transform="translate(-14.182 -4.5)">
+									<ellipse id="Ellipse_98" data-name="Ellipse 98" cx="11.234" cy="11" rx="11.234" ry="11"
+										transform="translate(224.682 222.5)" fill="none" stroke="#707070" stroke-width="1" />
+									<path id="Path_870" data-name="Path 870"
+										d="M6894.073,3102.459s3.363-9.085,15.189-9.085,16.264,9.085,16.264,9.085"
+										transform="translate(-6673.392 -2846.459)" fill="none" stroke="#707070" stroke-width="1" />
+								</g>
+							</g>
+						</svg>
+						<span class="text-none">Login / Register </span></a>
+					<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown04">
+						<a class="dropdown-item" href="./login.html">Login / Register</a>
+						<a class="dropdown-item" href="./userInfo.html">User Info</a>
+						<a class="dropdown-item" href="./order-history.html">Order History</a>
+					</div>
+				</li>
+				<!-- <a class="mr-4" href="./login.html">
 					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
 						<g id="Group_1072" data-name="Group 1072" transform="translate(-197 -210)">
 							<path id="Path_873" data-name="Path 873" d="M0,0H50V50H0Z" transform="translate(197 210)" fill="#fff" />
@@ -342,49 +337,26 @@
 							</g>
 						</g>
 					</svg>
-					<span class="text-none">Login / Register </span></a>
-				<div class="dropdown-menu text-h-1-4-1" aria-labelledby="dropdown04">
-					<a class="dropdown-item" href="./login.html">Login / Register</a>
-					<a class="dropdown-item" href="./userInfo.html">User Info</a>
-					<a class="dropdown-item" href="./order-history.html">Order History</a>
-				</div>
-			</li>
-			<!-- <a class="mr-4" href="./login.html">
-				<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
-					<g id="Group_1072" data-name="Group 1072" transform="translate(-197 -210)">
-						<path id="Path_873" data-name="Path 873" d="M0,0H50V50H0Z" transform="translate(197 210)" fill="#fff" />
-						<g id="Group_1071" data-name="Group 1071" transform="translate(-14.182 -4.5)">
-							<ellipse id="Ellipse_98" data-name="Ellipse 98" cx="11.234" cy="11" rx="11.234" ry="11"
-								transform="translate(224.682 222.5)" fill="none" stroke="#707070" stroke-width="1" />
-							<path id="Path_870" data-name="Path 870"
-								d="M6894.073,3102.459s3.363-9.085,15.189-9.085,16.264,9.085,16.264,9.085"
-								transform="translate(-6673.392 -2846.459)" fill="none" stroke="#707070" stroke-width="1" />
+					<span class="text-none dropdown">Login / Register</span>
+				</a> -->
+				<a type="button" data-toggle="modal" data-target="#cart">
+					<span class="spc-blue total-count icon-basket">0</span>
+					<svg id="icon-basket" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
+						<rect id="Rectangle_434" data-name="Rectangle 434" width="50" height="50" fill="none" />
+						<g id="Group_1001" data-name="Group 1001" transform="translate(-6882.778 -3087.228)">
+							<path id="Path_804" data-name="Path 804" d="M6895.929,3096.4h24.382l4.486,23.751h-34.035Z"
+								transform="translate(-0.001 6.984)" fill="none" stroke="#707070" stroke-width="1" />
+							<path id="Path_805" data-name="Path 805"
+								d="M6894.073,3103.771s1.877-10.4,8.476-10.4,9.074,10.4,9.074,10.4" transform="translate(4.931 3.949)"
+								fill="none" stroke="#707070" stroke-width="1" />
 						</g>
-					</g>
-				</svg>
-				<span class="text-none dropdown">Login / Register</span>
-			</a> -->
-			<a type="button" data-toggle="modal" data-target="#cart">
-				<span class="spc-blue total-count icon-basket">0</span>
-				<svg id="icon-basket" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 50 50">
-					<rect id="Rectangle_434" data-name="Rectangle 434" width="50" height="50" fill="none" />
-					<g id="Group_1001" data-name="Group 1001" transform="translate(-6882.778 -3087.228)">
-						<path id="Path_804" data-name="Path 804" d="M6895.929,3096.4h24.382l4.486,23.751h-34.035Z"
-							transform="translate(-0.001 6.984)" fill="none" stroke="#707070" stroke-width="1" />
-						<path id="Path_805" data-name="Path 805"
-							d="M6894.073,3103.771s1.877-10.4,8.476-10.4,9.074,10.4,9.074,10.4" transform="translate(4.931 3.949)"
-							fill="none" stroke="#707070" stroke-width="1" />
-					</g>
-				</svg>
+					</svg>
 
-				<span class="text-none">Basket</span>
-			</a>
-		</div>
-	</nav>
-	<!-- test -->
-	<section class="container" style=" margin: 3em 22px;">
-		<div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sit delectus quis dicta accusantium, dignissimos quia? Modi nulla rem ex placeat, rerum magnam. Qui ad voluptates natus deleniti iste illum.</div>
-		</section>
+					<span class="text-none">Basket</span>
+				</a>
+			</div>
+		</nav>
+	</div>
 	<!-- cart -->
 	<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
@@ -411,7 +383,6 @@
 		</div>
 	</div>
 	<!-- cart -->
-
 	<!-- Swiper -->
 	<div class="swiper-container">
 		<div class="swiper-wrapper" style="position: relative;">
@@ -419,12 +390,18 @@
 				<img src="./assets/img/spc-slider-1.jpg" />
 				<!-- text -->
 				<div class="col-xl-5 col-lg-5 col-sm-8 text-center slide-box">
-					<div class="col-12">
+					<div class="col-12" data-aos="fade-left" data-aos-duration="1500">
 						<div class="card-body" style="background-color: rgba(255, 255, 255, 0.6);">
 							<h4 class="mt-lg-4 text-m-6-7-6 spc-blue">Discover spring 2021</h4>
 							<div class="text-h-2-4-2">Lorem ipsum dolor sit amet</div>
 							<div class="mt-lg-4 mb-4 text-h-1-4-1 d-flex justify-content-center">
-								<button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">Shop Now</button>
+								<button type="submit" class="col-lg-6 col-sm-12 btn btn-primary btn-block">
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart2"
+										viewBox="0 0 16 16">
+										<path
+											d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+									</svg>
+									Shop Now</button>
 							</div>
 						</div>
 						<!-- card-body -->
@@ -448,7 +425,7 @@
 			<h4 class="col-12 text-center mb-4 text-h-3-4-3 spc-red">Best Sellers</h4>
 		</div>
 		<div class="container text-h-1-4-1">
-			<div class="row">
+			<div class="row" data-aos="fade-up">
 				<a href="#" class="card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
 					<div class="card mb-4 shadow-sm img-hover-zoom">
 						<div class="btn-card-box">
@@ -582,7 +559,7 @@
 		</div>
 		<div class="container text-h-1-4-1">
 			<div class="d-flex justify-content-between">
-				<div class="row">
+				<div class="row" data-aos="fade-up" data-aos-duration="1000">
 					<a href="#" class="mb-4 card-box col-12 col-lg-6 col-sm-12">
 						<div class="img-hover-zoom">
 							<img src="./assets/img/spc-be-1.png" alt="Nature" style="width:100%;">
@@ -673,7 +650,7 @@
 
 	<!-- newsletter -->
 	<section class="container p-4 white text-h-2-4-2 gray-800 news-box"
-		style="background-image:url(./assets/img/spc-banner-1.png);">
+		style="background-image:url(./assets/img/spc-banner-1.png);" data-aos="fade-up" data-aos-duration="1500">
 		<div class="col-lg-8 col-sm-10">
 			<h3 class="mb-4 text-m-5-7-5">Sign up our newsletter</h3>
 			<div class="mb-4">Sign up for our newsletter to follow our stories, receive product news, offers, updates and
@@ -683,7 +660,13 @@
 					<!-- <label for="exampleFormControlInput1">Email address</label> -->
 					<input type="email" class="form-control mr-4 mb-4 news-input" id="exampleFormControlInput1"
 						placeholder="Your email address">
-					<button type="submit" class="mb-4 btn btn-white">Sign me Up</button>
+					<button type="submit" class="mb-4 btn btn-white">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope"
+							viewBox="0 0 16 16">
+							<path
+								d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+						</svg>
+						Sign me Up</button>
 				</div>
 			</form>
 		</div>
@@ -740,9 +723,6 @@
 	<script src="./dist/js/swiper-bundle.min.js"></script>
 	<script src="./dist/js/aos.js"></script>
 	<script src="./dist/js/owl.carousel.min.js"></script>
-	<!-- SmartMenus jQuery plugin -->
-	<script src="./dist/js/jquery.smartmenus.min.js"></script>
-
 	<!-- //shopping-cart -->
 	<script src="./dist/js/shopping-cart.js"></script>
 	<script>
@@ -834,39 +814,41 @@
 
 			return false;
 		});
+		AOS.init();
 	</script>
 	<script>
-// SmartMenus init
-$(function() {
-  $('#main-menu').smartmenus({
-    mainMenuSubOffsetX: -1,
-    mainMenuSubOffsetY: 4,
-    subMenusSubOffsetX: 6,
-    subMenusSubOffsetY: -6
-  });
-});
+		jQuery(document).ready(function () {
 
-// SmartMenus mobile menu toggle button
-$(function() {
-  var $mainMenuState = $('#main-menu-state');
-  if ($mainMenuState.length) {
-    // animate mobile menu
-    $mainMenuState.change(function(e) {
-      var $menu = $('#main-menu');
-      if (this.checked) {
-        $menu.hide().slideDown(250, function() { $menu.css('display', ''); });
-      } else {
-        $menu.show().slideUp(250, function() { $menu.css('display', ''); });
-      }
-    });
-    // hide mobile menu beforeunload
-    $(window).bind('beforeunload unload', function() {
-      if ($mainMenuState[0].checked) {
-        $mainMenuState[0].click();
-      }
-    });
-  }
+if (document.documentElement.clientWidth < 950) {
+// do nothing below 950px
+$('.bi-caret-right-fill').addClass('none');
+// if ($('#dropdown05').hasClass("dropdown-sub")) {
+// 						$('.bi-caret-right-fill').addClass('none');
+// 						//$('#homeSecLink').removeClass('active');
+// 					} else {
+// 						$('.bi-caret-right-fill').removeClass('none');
+// 						//$('#homeSecLink').addClass('active');
+// 					}
+$('.dropdown-sub').addClass('add-toggle');
+ }
+else {
+	$('.bi-caret-right-fill').removeClass('none');
+	
+}
 });
+// 			$(window).on("resize", function () {
+// 				if ($(window).width() > 300 && $(window).width() < 700) {
+// 					// do the animations
+// 					if ($('#dropdown05').hasClass("dropdown-sub")) {
+// 						$('.bi-caret-right-fill').addClass('none');
+// 						//$('#homeSecLink').removeClass('active');
+// 					} else {
+// 						$('.bi-caret-right-fill').removeClass('none');
+// 						//$('#homeSecLink').addClass('active');
+// 					}
+// 				}
+// 			}
+// });
 	</script>
 </body>
 
