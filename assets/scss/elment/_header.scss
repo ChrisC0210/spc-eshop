@@ -261,6 +261,28 @@ video::-webkit-media-controls {
 	height: 30px;
 	width: 100%;
 }
+.header-promotion-2{
+	background-color: $gray-200;
+	height: 30px;
+	width: 100%;
+	a{
+		&:hover,:active{
+			text-decoration: none;
+			color: $spc-blue;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		display: none;
+	}
+}
+//mobile show nav
+.nav-top{
+	display: none !important;
+	@media screen and (max-width: 600px) {
+		display: block !important;
+	}
+}
+
 .spc-nav-all{
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 4px 6px #00000029;
@@ -275,7 +297,8 @@ video::-webkit-media-controls {
 .spc-logo{
 	//width: 100%;
 	//width: 200px;
-	width:240px;
+	//width:240px;
+	width:260px;
 	//max-width: 200px;
 	height:auto;
 	position: absolute;

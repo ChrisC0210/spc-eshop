@@ -32,6 +32,8 @@
 	.swiper-slide img {
 		display: block;
 		width: 100%;
+		height: 500px;
+		object-fit: cover;
 	}
 
 	.card-img-top {
@@ -145,6 +147,12 @@
 		.text-m-6-7-6 {
 			font-size: 20px;
 		}
+		.swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 300px;
+		object-fit: contain;
+	}
 	}
 
 	.card-text {
@@ -191,7 +199,15 @@
 </style>
 
 <body>
-	<div class="text-center pt-2 header-promotion white text-h-1-4-1">Free Shipping Now!</div>
+	<div class="text-center pt-2 header-promotion-2 spc-blue text-h-1-4-1">
+		<ul class="d-flex justify-content-center">
+			<li><a href="#" class="mr-2">About us |</a></li>
+			<li><a href="http://www.spc.edu.hk/" target="_blank" class="mr-2">St. Paul’s College |</a></li>
+			<li><a href="https://www.spc-foundation.org.hk/" target="_blank" class="mr-2">St. Paul’s College Foundation |</a></li>
+			<li><a href="#" class="mr-2">Make a Donation |</a></li>
+			<li><a href="#" class="mr-2">Contact Us</a></li>
+		</ul>
+	</div>
 	<!-- <div class="main-nav fixed-top">
 	</div> -->
 
@@ -203,129 +219,154 @@
 			<span class="main-menu-btn-icon"></span> Toggle main menu visibility
 		</label>
 		<a href="/"  style="z-index: 99999;">
-			<img class="spc-logo" src="./assets/icon/spc-eshop-logo.png" alt="spc-logo">
+			<!-- <img class="spc-logo" src="./assets/icon/spc-eshop-logo.png" alt="spc-logo"> -->
+			<img class="spc-logo" src="./assets/icon/spc-logo-new.png" alt="spc-logo">
 		</a>
 		<!-- Sample menu definition -->
-		<ul id="main-menu" class="sm sm-clean mt-4">
-			<li><a href="http://www.smartmenus.org/">Home</a></li>
-			<li><a href="http://www.smartmenus.org/about/">About</a>
-				<ul>
-					<li><a href="http://www.smartmenus.org/about/introduction-to-smartmenus-jquery/">Introduction to SmartMenus jQuery</a></li>
-					<li><a href="http://www.smartmenus.org/about/themes/">Demos + themes</a></li>
-					<li><a href="http://vadikom.com/about/#vasil-dinkov">The author</a></li>
-					<li><a href="http://www.smartmenus.org/about/vadikom/">The company</a>
-						<ul>
-							<li><a href="http://vadikom.com/about/">About Vadikom</a></li>
-							<li><a href="http://vadikom.com/projects/">Projects</a></li>
-							<li><a href="http://vadikom.com/services/">Services</a></li>
-							<li><a href="http://www.smartmenus.org/about/vadikom/privacy-policy/">Privacy policy</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li><a href="http://www.smartmenus.org/download/">Download</a></li>
-			<li><a href="http://www.smartmenus.org/support/">Support</a>
-				<ul>
-					<li><a href="http://www.smartmenus.org/support/premium-support/">Premium support</a></li>
-					<li><a href="http://www.smartmenus.org/support/forums/">Forums</a></li>
-				</ul>
-			</li>
-			<li><a href="http://www.smartmenus.org/docs/">Docs</a></li>
-			<li><a href="#">Sub test</a>
-				<ul>
-					<li><a href="#">Dummy item</a></li>
-					<li><a href="#">Dummy item</a></li>
-					<li><a href="#" class="disabled">Disabled menu item</a></li>
-					<li><a href="#">Dummy item</a></li>
-					<li><a href="#">more...</a>
-						<ul>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">more...</a>
-								<ul>
-									<li><a href="#">Dummy item</a></li>
-									<li><a href="#" class="current">A 'current' class item</a></li>
-									<li><a href="#">Dummy item</a></li>
-									<li><a href="#">more...</a>
-										<ul>
-											<li><a href="#">subMenusMinWidth</a></li>
-											<li><a href="#">10em</a></li>
-											<li><a href="#">forced.</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Dummy item</a></li>
-									<li><a href="#">Dummy item</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-							<li><a href="#">Dummy item</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
+		<ul id="main-menu" class="sm sm-clean mt-lg-4" data-smartmenus-id="16227147850606404">
+			<li><a href="#" class="has-submenu" id="sm-16227147850606404-1" aria-haspopup="true" aria-controls="sm-16227147850606404-2" aria-expanded="false">Categories<span class="sub-arrow"></span></a>
+				
+				<ul id="sm-16227147850606404-2" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-1" aria-expanded="false">
 
-		</ul>
+																<li>
+				<a href="http://spceshop.vela.hk/shopping/collection/1" class="has-submenu" id="sm-16227147850606404-3" aria-haspopup="true" aria-controls="sm-16227147850606404-4" aria-expanded="false">Apparel
+				<!-- <a href="#">Apparel -->
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+								<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+							</svg> -->
+						<span class="sub-arrow"></span></a>
+						<ul id="sm-16227147850606404-4" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-3" aria-expanded="false"><li>
+																												<a href="http://spceshop.vela.hk/shopping/collection/15">Jacket</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/16">Sweater</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/17">Polo</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/18">T-shirt</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/19">Shorts</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/20">Tie</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/21">Sportswear</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/22">School Uniform</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/23">Cap</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/64">Baby gift set</a>
+																				</li>
+					</ul>
+				</li>
+										<li>
+				<a href="http://spceshop.vela.hk/shopping/collection/2" class="has-submenu" id="sm-16227147850606404-5" aria-haspopup="true" aria-controls="sm-16227147850606404-6" aria-expanded="false">Accessories
+				<!-- <a href="#">Accessories -->
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+								<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+							</svg> -->
+						<span class="sub-arrow"></span></a>
+						<ul id="sm-16227147850606404-6" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-5" aria-expanded="false"><li>
+																												<a href="http://spceshop.vela.hk/shopping/collection/24">Bag</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/25">Totes</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/26">Keychains</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/27">Cuff links</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/28">Towels </a>
+														<a href="http://spceshop.vela.hk/shopping/collection/29">Bottles</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/30">Umberellas</a>
+																				</li>
+					</ul>
+				</li>
+										<li>
+				<a href="http://spceshop.vela.hk/shopping/collection/3" class="has-submenu" id="sm-16227147850606404-7" aria-haspopup="true" aria-controls="sm-16227147850606404-8" aria-expanded="false">Glassware
+				<!-- <a href="#">Glassware -->
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+								<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+							</svg> -->
+						<span class="sub-arrow"></span></a>
+						<ul id="sm-16227147850606404-8" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-7" aria-expanded="false"><li>
+																												<a href="http://spceshop.vela.hk/shopping/collection/31">Mugs</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/32">Cups</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/33">Wine glass</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/34">Decanter</a>
+																				</li>
+					</ul>
+				</li>
+										<li>
+				<a href="http://spceshop.vela.hk/shopping/collection/4" class="has-submenu" id="sm-16227147850606404-9" aria-haspopup="true" aria-controls="sm-16227147850606404-10" aria-expanded="false">Education
+				<!-- <a href="#">Education -->
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+								<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+							</svg> -->
+						<span class="sub-arrow"></span></a>
+						<ul id="sm-16227147850606404-10" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-9" aria-expanded="false"><li>
+																												<a href="http://spceshop.vela.hk/shopping/collection/35">Stationary</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/36">Books</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/37">Badge</a>
+																				</li>
+					</ul>
+				</li>
+										<li>
+				<a href="http://spceshop.vela.hk/shopping/collection/5" class="has-submenu" id="sm-16227147850606404-11" aria-haspopup="true" aria-controls="sm-16227147850606404-12" aria-expanded="false">Electronics
+				<!-- <a href="#">Electronics -->
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+								<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+							</svg> -->
+						<span class="sub-arrow"></span></a>
+						<ul id="sm-16227147850606404-12" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-11" aria-expanded="false"><li>
+																												<a href="http://spceshop.vela.hk/shopping/collection/38">Power bank charger</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/39">Watch</a>
+																				</li>
+					</ul>
+				</li>
+										<li>
+				<a href="http://spceshop.vela.hk/shopping/collection/6" class="has-submenu" id="sm-16227147850606404-13" aria-haspopup="true" aria-controls="sm-16227147850606404-14" aria-expanded="false">Miscellaneous
+				<!-- <a href="#">Miscellaneous -->
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+								<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+							</svg> -->
+						<span class="sub-arrow"></span></a>
+						<ul id="sm-16227147850606404-14" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-13" aria-expanded="false"><li>
+																												<a href="http://spceshop.vela.hk/shopping/collection/40">Masks</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/41">Chair</a>
+														<a href="http://spceshop.vela.hk/shopping/collection/42">Car plate</a>
+																				</li>
+					</ul>
+				</li>
+										<li>
+				<a href="http://spceshop.vela.hk/shopping/collection/43" class="has-submenu" id="sm-16227147850606404-15" aria-haspopup="true" aria-controls="sm-16227147850606404-16" aria-expanded="false">Health &amp; Body Care
+				<!-- <a href="#">Health &amp; Body Care -->
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+								<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+							</svg> -->
+						<span class="sub-arrow"></span></a>
+						<ul id="sm-16227147850606404-16" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-15" aria-expanded="false"><li>
+																												<a href="http://spceshop.vela.hk/shopping/collection/44">Body Care</a>
+																				</li>
+					</ul>
+				</li>
+										<li>
+				<a href="http://spceshop.vela.hk/shopping/collection/65" class="has-submenu" id="sm-16227147850606404-17" aria-haspopup="true" aria-controls="sm-16227147850606404-18" aria-expanded="false">Sports
+				<!-- <a href="#">Sports -->
+				<!-- <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+								<path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+							</svg> -->
+						<span class="sub-arrow"></span></a>
+						<ul id="sm-16227147850606404-18" role="group" aria-hidden="true" aria-labelledby="sm-16227147850606404-17" aria-expanded="false"><li>
+																																		</li>
+					</ul>
+				</li>
+				
+				</ul>
+				
+			</li>
+			<li><a href="http://spceshop.vela.hk/shopping/new_item">New Items</a></li>
+			<!-- <li><a href="http://spceshop.vela.hk/shopping/pre_order">Pre-orders</a></li> -->
+			<li><a href="http://spceshop.vela.hk/shopping/limited_edition">170th Edition</a></li>
+			<li><a href="http://spceshop.vela.hk/shopping/promotion">Exclusive Offer</a></li>
+			<div class="nav-top">
+				<li><a href="#">About us</a></li>
+				<li><a href="http://www.spc.edu.hk/" target="_blank">St. Paul’s College</a></li>
+				<li><a href="https://www.spc-foundation.org.hk/" target="_blank">St. Paul’s College Foundation</a></li>
+				<li><a href="#">Make a Donation</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</div>
+
+	
+
+			<li><a href="#">&nbsp;</a></li>
+	
+			</ul>
 		<div class="nav-right d-flex">
 			<li class="nav-item dropdown" style="margin-top: -14px;">
 				<a class=" nav-link dropdown-toggle mb-4" href="#" id="dropdown0" data-toggle="dropdown" aria-haspopup="true"
@@ -381,10 +422,6 @@
 			</a>
 		</div>
 	</nav>
-	<!-- test -->
-	<section class="container" style=" margin: 3em 22px;">
-		<div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos sit delectus quis dicta accusantium, dignissimos quia? Modi nulla rem ex placeat, rerum magnam. Qui ad voluptates natus deleniti iste illum.</div>
-		</section>
 	<!-- cart -->
 	<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
@@ -572,6 +609,103 @@
 		</div>
 	</div>
 	<!-- card -->
+		<!-- card -->
+		<div class="container">
+			<div class="row mt-4 mb-4 text-center  d-flex justify-content-center">
+				<!-- <h4 class="col-12 text-center mt-4 text-m-2-7-2 spc-blue">PRODUCTS</h4> -->
+				<h4 class="col-12 text-center text-h-3-4-3 spc-red">New Item</h4>
+			</div>
+			<div class="text-h-1-4-1">
+				<div class="row">
+					<div class="container">
+						<div class="owl-carousel owl-carousel-new d-flex justify-content-center">
+							<a href="http://spceshop.vela.hk/shopping/collection/44/product/83">
+								<div class="p-lg-4 rounded new-item-card" style="background-image: url('/assets/img/bg-new-items.png');">
+									<div class="item row p-4">
+										<div class="col-lg-6 col-sm-12">
+											<p class="spc-red text-m-1-4-1 mt-4 mb-2">NEW！</p>
+											<h4 class="spc-blue text-h-3-4-3 mb-4">K.I. LIGURIAN HONEY HAND & NAIL CRÈME 100ml</h4>
+											<p class="gray-800 text-h-1-4-1 mb-4 text-truncate">
+												A rich, luscious Hand & Nail Crème enriched with Certified Organic honey nectar and jojoba oil to nourish the delicate skin of your hands. Massage into hands, nails and cuticles and enjoy the fresh lasting fragrance. Citrus fragrances are known to help lift fatigue and ease stress.
+											</p>
+											<button class="btn btn-primary mb-4">Shop Now</button>
+										</div>
+										<div class="col-lg-6 col-sm-12 d-flex">
+										<img class="col-12 img-fluid align-self-center drop-shadow" src="http://spceshop.vela.hk/shopping/product_img/3" alt="">
+		
+										</div>
+										
+									</div>
+								</div>
+							</a>
+							<a href="http://spceshop.vela.hk/shopping/collection/36/product/91">
+								<div class="p-lg-4 rounded new-item-card" style="background-image: url('/assets/img/bg-new-items.png');">
+									<div class="item row p-4">
+										<div class="col-lg-6 col-sm-12">
+											<p class="spc-red text-m-1-4-1 mt-4 mb-2">NEW！</p>
+											<h4 class="spc-blue text-h-3-4-3 mb-4">cuff links</h4>
+											<p class="gray-800 text-h-1-4-1 mb-4 text-truncate">
+												product desc product desc product desc product desc product desc product desc4
+											</p>
+											<button class="btn btn-primary mb-4">Shop Now</button>
+										</div>
+										<div class="col-lg-6 col-sm-12 d-flex">
+										<!-- <img class="col-12 img-fluid align-self-center drop-shadow" src="http://spceshop.vela.hk/shopping/product_img/19" alt=""> -->
+										<img class="col-12 img-fluid align-self-center drop-shadow" src="/assets/img/new-item-19.png" alt="">
+		
+										</div>
+										
+									</div>
+								</div>							
+							</a>
+
+							<a href="http://spceshop.vela.hk/shopping/collection/2/product/4">
+								<div class="p-lg-4 rounded new-item-card" style="background-image: url('/assets/img/bg-new-items.png');">
+									<div class="item row p-4">
+										<div class="col-lg-6 col-sm-12">
+											<p class="spc-red text-m-1-4-1 mt-4 mb-2">NEW！</p>
+											<h4 class="spc-blue text-h-3-4-3 mb-4">From Lower Lascar row</h4>
+											<p class="gray-800 text-h-1-4-1 mb-4 text-truncate">
+												Author: Dr. Frederick Fung M.D.
+											</p>
+											<button class="btn btn-primary mb-4">Shop Now</button>
+										</div>
+										<div class="col-lg-6 col-sm-12 d-flex">
+										<img class="col-12 img-fluid align-self-center drop-shadow" src="/assets/img/new-item-13.png" alt="">
+										<!-- <img class="col-12 img-fluid align-self-center drop-shadow" src="http://spceshop.vela.hk/shopping/product_img/13" alt=""> -->
+		
+										</div>
+										
+									</div>
+								</div>
+							</a>
+					</div>
+						<div class="col-sm-12">
+							<!-- <img class="col-10" src="./assets/img/bg-new-items.png" alt=""> -->
+						</div>
+					</div>
+					<!-- <a href="#" class="card-box-2 col-6 col-md-4 col-lg-4 col-sm-6">
+						<div class="card mb-4 shadow-sm img-hover-zoom">
+							<div class="btn-card-box none">
+								<button class="text-h-2-4-2">View</button>
+							</div>
+							<img src="./assets/img/spc-product-1.png" class="bd-placeholder-img card-img-top" alt="..." width="100%"
+								height="225">
+							<div class="card-body">
+								<h5 class="card-title text-h-2-4-2">Umbrella</h5>
+								<p class="card-text">$ 50</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+									</div>
+								</div>
+							</div>
+						</div>
+					</a> -->
+				</div>
+			</div>
+		</div>
+		<!-- card -->
+
 
 
 	<!-- card -->
@@ -780,20 +914,45 @@
 				},
 			});
 			//owl
-			$('.owl-carousel').owlCarousel({
-				nav: true,
+			// $('.owl-carousel').owlCarousel({
+			// 	nav: true,
+			// 	dots: false,
+			// 	margin: 20,
+			// 	items: 1,
+			// 	responsive: {
+			// 		900: {
+			// 			items: 4,
+			// 		},
+			// 		800: {
+			// 			items: 1,
+			// 		},
+			// 		500: {
+			// 			items: 1,
+			// 		},
+			// 	}
+			// });
+			//new item
+			$('.owl-carousel.owl-carousel-new').owlCarousel({
+				nav: false,
 				dots: false,
-				margin: 20,
 				items: 1,
+				margin: 20,
+				autoplay:true,
+				autoplayTimeout:5000,
+				autoplayHoverPause:true,
+				loop:true,
 				responsive: {
-					900: {
-						items: 4,
+					1000: {
+						items: 1,
+						stagePadding: 100,
 					},
 					800: {
 						items: 1,
+						stagePadding: 0,
 					},
 					500: {
 						items: 1,
+						stagePadding: 0,
 					},
 				}
 			});

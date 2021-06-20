@@ -115,3 +115,24 @@
 		position: relative;
 		top: -10px;
 	}
+//210604 chris add
+//New Item
+.new-item-card{
+	height:400px;
+	//background: url('./assets/img/bg-new-items.png');
+	//background-image: url("assets/img/bg-new-items.png");
+	//background-image: url('/assets/img/bg-new-items.png');
+	//background-image: url('<?php bloginfo("template_directory");?>/images/visitus.png');
+	@media screen and (max-width: 800px) {
+		height: 800px;
+	}
+	@media screen and (max-width: 600px) {
+		height: 700px;
+	}
+	&:hover{
+		img{
+			transform: scale(1.1);
+			transition: transform .5s ease;
+		}
+	}
+}

@@ -14267,7 +14267,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown
 
 .smart-bg {
   background-color: #fefefe;
-  height: 80px;
+  height: 90px;
   box-shadow: 0px 4px 6px #00000029;
   -webkit-box-shadow: 0px 4px 6px #00000029;
 }
@@ -15272,6 +15272,31 @@ a:hover {
   top: -10px;
 }
 
+.new-item-card {
+  height: 400px;
+}
+
+@media screen and (max-width: 800px) {
+  .new-item-card {
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .new-item-card {
+    height: 700px;
+  }
+}
+
+.new-item-card:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
 .bg-blue {
   height: 800px;
   background-color: #18345F;
@@ -15800,6 +15825,33 @@ video::-webkit-media-controls {
   width: 100%;
 }
 
+.header-promotion-2 {
+  background-color: #F5F5F5;
+  height: 30px;
+  width: 100%;
+}
+
+.header-promotion-2 a:hover, .header-promotion-2 a :active {
+  text-decoration: none;
+  color: #274778;
+}
+
+@media screen and (max-width: 600px) {
+  .header-promotion-2 {
+    display: none;
+  }
+}
+
+.nav-top {
+  display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-top {
+    display: block !important;
+  }
+}
+
 .spc-nav-all {
   background-color: white;
   box-shadow: 0px 4px 6px #00000029;
@@ -15811,7 +15863,7 @@ video::-webkit-media-controls {
 }
 
 .spc-logo {
-  width: 240px;
+  width: 260px;
   height: auto;
   position: absolute;
   top: 50%;
@@ -16021,5 +16073,10 @@ video::-webkit-media-controls {
 
 .nav-right a {
   -webkit-appearance: none;
+}
+
+.drop-shadow {
+  -webkit-filter: drop-shadow(10px 10px 6px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(10px 10px 6px rgba(0, 0, 0, 0.2));
 }
 /*# sourceMappingURL=all.css.map */
