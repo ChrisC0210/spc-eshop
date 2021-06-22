@@ -120,3 +120,4 @@ Fixed RWD style
 >>>productPage-chris.blade.php
 Fixed RWD style
 owl-carousel:.owl-nav button.owl-prev
+>>>login 

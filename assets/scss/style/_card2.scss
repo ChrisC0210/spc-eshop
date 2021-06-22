@@ -119,15 +119,33 @@
 //New Item
 .new-item-card{
 	height:400px;
+	//height: 100%;
+
 	//background: url('./assets/img/bg-new-items.png');
 	//background-image: url("assets/img/bg-new-items.png");
 	//background-image: url('/assets/img/bg-new-items.png');
 	//background-image: url('<?php bloginfo("template_directory");?>/images/visitus.png');
+	div.img{
+		flex: 0 0 80% !important;
+		//@at-root: 100px;
+		min-width: 50px !important;
+		max-width: 60px !important;
+		object-fit: contain !important;
+	}
 	@media screen and (max-width: 800px) {
 		height: 800px;
+		//height: 100%;
 	}
 	@media screen and (max-width: 600px) {
-		height: 700px;
+		height: 600px;
+		//height: 100%;
+		div.img{
+			flex: 0 0 80% !important;
+			//@at-root: 100px;
+			min-width: 50px !important;
+			max-width: 60px !important;
+			object-fit: contain !important;
+		}
 	}
 	&:hover{
 		img{

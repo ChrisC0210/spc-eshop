@@ -15276,6 +15276,16 @@ a:hover {
   height: 400px;
 }
 
+.new-item-card div.img {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 80% !important;
+          flex: 0 0 80% !important;
+  min-width: 50px !important;
+  max-width: 60px !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+}
+
 @media screen and (max-width: 800px) {
   .new-item-card {
     height: 800px;
@@ -15284,7 +15294,16 @@ a:hover {
 
 @media screen and (max-width: 600px) {
   .new-item-card {
-    height: 700px;
+    height: 600px;
+  }
+  .new-item-card div.img {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 80% !important;
+            flex: 0 0 80% !important;
+    min-width: 50px !important;
+    max-width: 60px !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
   }
 }
 
